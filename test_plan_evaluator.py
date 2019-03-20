@@ -142,23 +142,26 @@ while(True):
             print("{}. Ensure that a path is specified or warrants.csv is in the working directory.".format(err))
         
     elif main_sel == "Step detector":
-        directory = "E:\\Work\GHSP\\HDrive\\WIP\\12401 - Ducato\\Issue #286 - PV testing\\Issue #286.1 Neutral-aft testing\\Session #2\\201900003\\Graphs-Data\\201900003 Forcible Override Test.is_ccyclic_RawData"
-        X='Extension (mm)'
+        #directory = "E:\\Work\GHSP\\HDrive\\WIP\\12401 - Ducato\\Issue #286 - PV testing\\Issue #286.1 Neutral-aft testing\\Session #2\\201900003\\Graphs-Data\\201900003 Forcible Override Test.is_ccyclic_RawData"
+        directory = "E:\\Work\\GHSP\\HDrive\\WIP\\12401 - Ducato\\Issue #286 - PV testing\\Issue #286.1 Neutral-aft testing\\Neutral block testing session #1\\20190614\Data\\20190614 Forcible Override Test Neutral.is_ccyclic_RawData"
+        X='Time measurement (s)'
         Y='Primary load measurement (N)'
-        edge="Falling"
+        edge="Both"
         csv_files = []
         for file in os.listdir(directory):
             if file.endswith(".csv"):
                 csv_files.append(os.path.join(directory,file))
         csvfile = open("Edges.csv",'a',newline='')
         WRT = csv.writer(csvfile, dialect='excel')
-        WRT.writerow(["Sample",X,Y])
+        WRT.writerow(["Sample",X,Y,"Rising/Falling"])
         for i,f in enumerate(csv_files):
-            print(f)
+            sample = f[-12:-4].replace("_","")
+            # Gets the suffix of the file name and deletes leading underscore
+            print(sample)
             try:    
                 edges = Detect_step.main(f,X,Y,edge)
                 for e in edges:
-                    row = (i+1,e[0],e[1])
+                    row = (sample,e[0],e[1],e[2])
                     WRT.writerow(row)
             except Exception as ex:
                 exc_type, exc_value, exc_traceback = sys.exc_info()

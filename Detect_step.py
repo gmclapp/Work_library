@@ -19,11 +19,11 @@ def detect_step(df, X, Y,edge="Falling", step_size=1):
     for i,elem in enumerate(df["dx/dy"]):
         test = slope/float(df.at[i,"dx/dy"])
 
-        if test < 0 and slope > 0 and edge=="Falling":
-            edges.append((df.at[i,X],df.at[i,Y]))
+        if test < 0 and slope > 0 and (edge=="Falling" or edge=='Both'):
+            edges.append((df.at[i,X],df.at[i,Y],"Falling"))
             log("Slope polarity change. Falling edge")
-        elif test < 0 and slope < 0 and edge == "Rising":
-            edges.append((df.at[i,X],df.at[i,Y]))
+        elif test < 0 and slope < 0 and (edge == "Rising" or edge=='Both'):
+            edges.append((df.at[i,X],df.at[i,Y],"Rising"))
             log("Slope polarity change. Rising edge")
         slope = float(df.at[i,"dx/dy"])
 
@@ -46,7 +46,7 @@ def main(directory=None, X=None, Y=None, edge="Falling"):
         log("User entered filename \""+f+"\"")
         X='Extension (mm)'
         Y='Primary load measurement (N)'
-        edge="Falling"
+        edge="Both"
         
         filename = directory+f
     else:
