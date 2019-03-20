@@ -1,0 +1,200 @@
+[2019:3:19:19:27:12] User entered directory ""
+[2019:3:19:19:27:14] User entered filename "warrants.csv"
+[2019:3:19:19:31:40] User entered directory ""
+[2019:3:19:19:31:44] User entered filename "warrants.csv"
+[2019:3:19:19:32:8] User entered directory ""
+[2019:3:19:19:32:11] User entered filename "warrants.csv"
+[2019:3:19:19:32:26] User entered directory ""
+[2019:3:19:19:32:28] User entered filename "warrants.csv"
+[2019:3:19:19:33:23] User entered directory ""
+[2019:3:19:19:33:26] User entered filename "warrants.csv"
+[2019:3:19:19:39:6] User entered directory ""
+[2019:3:19:19:39:10] User entered filename "dxdytest.csv"
+[2019:3:19:19:39:10] Appending first derivative column
+[2019:3:19:19:42:25] User entered directory ""
+[2019:3:19:19:42:31] User entered filename "dxdytest.csv"
+[2019:3:19:19:42:31] Appending first derivative column
+[2019:3:19:19:42:31] Getting first dx/dy element
+[2019:3:19:19:46:19] User entered directory ""
+[2019:3:19:19:46:24] User entered filename "dxdytest.csv"
+[2019:3:19:19:46:24] Appending first derivative column
+[2019:3:19:19:46:24] Getting first dx/dy element
+[2019:3:19:19:47:16] User entered directory ""
+[2019:3:19:19:47:20] User entered filename "dxdytest.csv"
+[2019:3:19:19:47:20] Appending first derivative column
+[2019:3:19:19:47:20] Getting first dx/dy element 2.0
+[2019:3:19:19:48:58] User entered directory ""
+[2019:3:19:19:49:4] User entered filename "dxdytest.csv"
+[2019:3:19:19:49:4] Appending first derivative column
+[2019:3:19:19:49:4] Getting first dx/dy element 2.0
+[2019:3:19:19:49:40] User entered directory ""
+[2019:3:19:19:49:43] User entered filename "dxdytest.csv"
+[2019:3:19:19:49:43] Appending first derivative column
+[2019:3:19:19:49:43] Getting first dx/dy element 2.0
+[2019:3:19:19:50:42] User entered directory ""
+[2019:3:19:19:50:47] User entered filename "dxdytest.csv"
+[2019:3:19:19:50:47] Appending first derivative column
+[2019:3:19:19:50:47] Getting first dx/dy element 2.0
+[2019:3:19:19:52:18] User entered directory ""
+[2019:3:19:19:52:23] User entered filename "dxdytest.csv"
+[2019:3:19:19:52:23] Appending first derivative column
+[2019:3:19:19:52:23] Getting first dx/dy element 2.0
+[2019:3:19:19:53:23] User entered directory ""
+[2019:3:19:19:53:27] User entered filename "dxdytest.csv"
+[2019:3:19:19:53:27] Appending first derivative column
+[2019:3:19:19:53:27] Getting first dx/dy element 2.0
+[2019:3:19:19:54:8] User entered directory ""
+[2019:3:19:19:54:11] User entered filename "dxdytest.csv"
+[2019:3:19:19:54:11] Appending first derivative column
+[2019:3:19:19:54:11] Getting first dx/dy element 2.0
+[2019:3:19:19:56:34] User entered directory ""
+[2019:3:19:19:56:38] User entered filename "dxdytest.csv"
+[2019:3:19:19:56:38] Appending first derivative column
+[2019:3:19:19:57:34] User entered directory ""
+[2019:3:19:19:57:38] User entered filename "dxdytest.csv"
+[2019:3:19:19:57:38] Appending first derivative column
+[2019:3:19:19:58:49] User entered directory ""
+[2019:3:19:19:58:53] User entered filename "dxdytest.csv"
+[2019:3:19:19:58:53] Appending first derivative column
+[2019:3:19:19:59:54] User entered directory ""
+[2019:3:19:19:59:58] User entered filename "dxdytest.csv"
+[2019:3:19:19:59:58] Appending first derivative column
+[2019:3:19:19:59:58] Test metric: nan Next slope: nan
+[2019:3:19:19:59:58] Test metric: nan Next slope: 2.0
+[2019:3:19:19:59:58] Test metric: 1.0 Next slope: 2.0
+[2019:3:19:20:0:8] User entered directory ""
+[2019:3:19:20:0:14] User entered filename "dxdytest.csv"
+[2019:3:19:20:0:14] Appending first derivative column
+[2019:3:19:20:0:14] Test metric: nan Next slope: nan
+[2019:3:19:20:0:14] Test metric: nan Next slope: 2.0
+[2019:3:19:20:0:14] Test metric: 1.0 Next slope: 2.0
+[2019:3:19:20:1:11] User entered directory ""
+[2019:3:19:20:1:11] User entered filename ""
+[2019:3:19:20:1:11] Bad filename given
+[2019:3:19:20:1:17] User entered directory ""
+[2019:3:19:20:1:21] User entered filename "dxdytest.csv"
+[2019:3:19:20:1:21] Appending first derivative column
+[2019:3:19:20:1:21] Test metric: nan Next slope: nan
+[2019:3:19:20:1:21] Test metric: nan Next slope: 2.0
+[2019:3:19:20:1:21] Test metric: 1.0 Next slope: 2.0
+[2019:3:19:20:2:11] User entered directory ""
+[2019:3:19:20:2:17] User entered filename "dxdytest.csv"
+[2019:3:19:20:2:17] Appending first derivative column
+[2019:3:19:20:2:17] Test metric: nan Next slope: nan
+[2019:3:19:20:2:17] Test metric: nan Next slope: 2.0
+[2019:3:19:20:2:17] Test metric: 1.0 Next slope: 2.0
+[2019:3:19:20:2:36] User entered directory ""
+[2019:3:19:20:2:39] User entered filename "dxdytest.csv"
+[2019:3:19:20:2:39] Appending first derivative column
+[2019:3:19:20:2:39] Test metric: nan Next slope: nan
+[2019:3:19:20:2:39] Test metric: nan Next slope: 2.0
+[2019:3:19:20:2:39] Test metric: 1.0 Next slope: 2.0
+[2019:3:19:20:38:46] User entered directory ""
+[2019:3:19:20:38:51] User entered filename "dxdytest.csv"
+[2019:3:19:20:38:51] Appending first derivative column
+[2019:3:19:20:38:51] Test metric: nan Next slope: nan
+[2019:3:19:20:38:51] Test metric: nan Next slope: 2.0
+[2019:3:19:20:38:51] Test metric: 1.0 Next slope: 2.0
+[2019:3:19:20:41:54] User entered directory ""
+[2019:3:19:20:41:57] User entered filename "dxdytest.csv"
+[2019:3:19:20:41:57] Appending first derivative column
+[2019:3:19:20:41:57] Test metric: nan Next slope: nan
+[2019:3:19:20:41:57] Test metric: nan Next slope: 2.0
+[2019:3:19:20:41:57] Test metric: 1.0 Next slope: 2.0
+[2019:3:19:20:42:59] User entered directory ""
+[2019:3:19:20:43:3] User entered filename "dxdytest.csv"
+[2019:3:19:20:43:3] Appending first derivative column
+[2019:3:19:20:43:50] User entered directory ""
+[2019:3:19:20:43:56] User entered filename "dxdytest.csv"
+[2019:3:19:20:43:56] Appending first derivative column
+[2019:3:19:20:45:10] User entered directory ""
+[2019:3:19:20:45:14] User entered filename "dxdytest.csv"
+[2019:3:19:20:45:14] Appending first derivative column
+[2019:3:19:20:48:38] User entered directory ""
+[2019:3:19:20:48:41] User entered filename "dxdytest"
+[2019:3:19:20:48:41] Bad filename given
+[2019:3:19:20:48:46] User entered directory ""
+[2019:3:19:20:48:49] User entered filename "dxdytest.csv"
+[2019:3:19:20:48:49] Appending first derivative column
+[2019:3:19:20:49:1] User entered directory ""
+[2019:3:19:20:49:5] User entered filename "dxdytest.csv"
+[2019:3:19:20:49:5] Appending first derivative column
+[2019:3:19:20:50:53] User entered directory ""
+[2019:3:19:20:50:58] User entered filename "dxdytest.csv"
+[2019:3:19:20:50:58] Appending first derivative column
+[2019:3:19:20:50:58] Slope polarity change. Falling edge
+[2019:3:19:20:50:58] Slope polarity change. Rising edge
+[2019:3:19:20:51:21] User entered directory ""
+[2019:3:19:20:51:24] User entered filename "dxdytest.csv"
+[2019:3:19:20:51:24] Appending first derivative column
+[2019:3:19:20:51:24] Slope polarity change. Falling edge
+[2019:3:19:20:51:24] Slope polarity change. Rising edge
+[2019:3:19:20:51:42] User entered directory ""
+[2019:3:19:20:51:46] User entered filename "dxdytest.csv"
+[2019:3:19:20:51:46] Appending first derivative column
+[2019:3:19:20:51:46] Slope polarity change. Falling edge
+[2019:3:19:20:51:46] Slope polarity change. Rising edge
+[2019:3:19:20:52:16] User entered directory ""
+[2019:3:19:20:52:20] User entered filename "dxdytest.csv"
+[2019:3:19:20:52:20] Appending first derivative column
+[2019:3:19:20:52:20] Slope polarity change. Falling edge
+[2019:3:19:20:52:20] Slope polarity change. Rising edge
+[2019:3:19:20:54:26] User entered directory ""
+[2019:3:19:20:54:29] User entered filename "dxdytest.csv"
+[2019:3:19:20:54:29] Appending first derivative column
+[2019:3:19:20:54:29] Slope polarity change. Rising edge
+[2019:3:19:20:54:29] Slope polarity change. Falling edge
+[2019:3:19:20:55:33] User entered directory ""
+[2019:3:19:20:55:36] User entered filename "dxdytest.csv"
+[2019:3:19:20:55:36] Appending first derivative column
+[2019:3:19:20:55:36] Slope polarity change. Falling edge
+[2019:3:19:20:56:3] User entered directory ""
+[2019:3:19:20:56:7] User entered filename "dxdytest.csv"
+[2019:3:19:20:56:7] Appending first derivative column
+[2019:3:19:20:56:7] Slope polarity change. Rising edge
+[2019:3:19:20:56:59] User entered directory ""
+[2019:3:19:20:57:1] User entered filename "Specimen_RawData_1.csv"
+[2019:3:19:20:59:54] User entered directory ""
+[2019:3:19:21:0:5] User entered filename "Specimen_RawData_1.csv"
+[2019:3:19:21:0:19] User entered directory ""
+[2019:3:19:21:0:27] User entered filename "Specimen_RawData_1.csv"
+[2019:3:19:21:0:48] User entered directory ""
+[2019:3:19:21:0:56] User entered filename "Specimen_RawData_1.csv"
+[2019:3:19:21:0:56] Appending first derivative column
+[2019:3:19:21:0:56] Slope polarity change. Rising edge
+[2019:3:19:21:0:56] Slope polarity change. Rising edge
+[2019:3:19:21:0:56] Slope polarity change. Rising edge
+[2019:3:19:21:0:57] Slope polarity change. Rising edge
+[2019:3:19:21:0:57] Slope polarity change. Rising edge
+[2019:3:19:21:0:57] Slope polarity change. Rising edge
+[2019:3:19:21:0:57] Slope polarity change. Rising edge
+[2019:3:19:21:0:57] Slope polarity change. Rising edge
+[2019:3:19:21:0:57] Slope polarity change. Rising edge
+[2019:3:19:21:0:57] Slope polarity change. Rising edge
+[2019:3:19:21:0:57] Slope polarity change. Rising edge
+[2019:3:19:21:0:58] Slope polarity change. Rising edge
+[2019:3:19:21:0:59] Slope polarity change. Rising edge
+[2019:3:19:21:0:59] Slope polarity change. Rising edge
+[2019:3:19:21:0:59] Slope polarity change. Rising edge
+[2019:3:19:21:0:59] Slope polarity change. Rising edge
+[2019:3:19:21:0:59] Slope polarity change. Rising edge
+[2019:3:19:21:2:10] User entered directory ""
+[2019:3:19:21:2:18] User entered filename "Specimen_RawData_1.csv"
+[2019:3:19:21:2:18] Appending first derivative column
+[2019:3:19:21:2:18] Slope polarity change. Falling edge
+[2019:3:19:21:2:18] Slope polarity change. Falling edge
+[2019:3:19:21:2:18] Slope polarity change. Falling edge
+[2019:3:19:21:2:18] Slope polarity change. Falling edge
+[2019:3:19:21:2:18] Slope polarity change. Falling edge
+[2019:3:19:21:2:18] Slope polarity change. Falling edge
+[2019:3:19:21:2:18] Slope polarity change. Falling edge
+[2019:3:19:21:2:18] Slope polarity change. Falling edge
+[2019:3:19:21:2:18] Slope polarity change. Falling edge
+[2019:3:19:21:2:18] Slope polarity change. Falling edge
+[2019:3:19:21:2:18] Slope polarity change. Falling edge
+[2019:3:19:21:2:18] Slope polarity change. Falling edge
+[2019:3:19:21:2:18] Slope polarity change. Falling edge
+[2019:3:19:21:2:18] Slope polarity change. Falling edge
+[2019:3:19:21:2:18] Slope polarity change. Falling edge
+[2019:3:19:21:2:18] Slope polarity change. Falling edge
+[2019:3:19:21:2:18] Slope polarity change. Falling edge

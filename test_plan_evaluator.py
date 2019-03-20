@@ -3,8 +3,12 @@ import os
 import datetime as dt
 import time
 import csv
-import misc_functions as mf
-import warrant_fetcher as wf
+import misc_functions as mf # 0.2.6
+import warrant_fetcher as wf # 0.0.1
+import sanitize_inputs as si # 0.3.0
+import Solenoid_on_response
+import Solenoid_off_response
+import Detect_step
 
 __version__ = "0.0.1"
 
@@ -102,20 +106,44 @@ def parametric_eval(warrant_link):
         else:
             continue
 
+def sol_resp():
+    for p in paths:
+        log = open("log.txt", mode='a')
+        print("\n{} Processing {} On response time.".format(mf.timestamp(),
+                                                          p),file=log)
+        log.close()
+        Solenoid_on_response.main(p)
+
+        log = open("log.txt", mode='a')
+        print("\n{} Processing {} Off response time.".format(mf.timestamp(),
+                                                           p),
+              file=log)
+        log.close()
+        Solenoid_off_response.main(p)
 
 #----Main---#
 log = open("log.txt", mode='a')
-paths = wf.fetch_warrant_paths() 
-for p in paths:
-    log = open("log.txt", mode='a')
-    print("\n{} Processing {} On response time.".format(mf.timestamp(),
-                                                      p),file=log)
+main_menu = ("Fetch a list of warrants",
+             "Analyze response times",
+             "Step detector",
+             "Quit") 
+   
+while(True):
+    print("What would you like to do?\n")
+    main_sel = main_menu[si.select(main_menu)]
+    print("{} User selected \"{}\" from main menu".format(mf.timestamp(),main_sel),file=log)
     log.close()
-    Solenoid_on_response.main(p)
-
-    log = open("log.txt", mode='a')
-    print("\n{} Processing {} Off response time.".format(mf.timestamp(),
-                                                       p),
-          file=log)
-    log.close()
-    Solenoid_off_response.main(p)
+    if main_sel == "Fetch a list of warrants":
+        try:
+            paths = wf.fetch_warrant_paths()
+            
+        except FileNotFoundError as err:
+            print("{}. Ensure that a path is specified or warrants.csv is in the working directory.".format(err))
+        
+    elif main_sel == "Step detector":
+        file = "Specimen_RawData_1.csv"
+        df = pd.read_csv(file)
+        df = detect_step(df)
+        
+    elif main_sel == "Quit":
+        break
