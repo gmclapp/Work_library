@@ -198,3 +198,798 @@
 [2019:3:19:21:2:18] Slope polarity change. Falling edge
 [2019:3:19:21:2:18] Slope polarity change. Falling edge
 [2019:3:19:21:2:18] Slope polarity change. Falling edge
+[2019:3:20:8:10:27] User entered directory ""
+[2019:3:20:8:10:32] User entered filename "dxdytest.csv"
+[2019:3:20:8:10:52] User entered directory "Specimen_RawData_1.csv"
+[2019:3:20:8:11:4] User entered directory ""
+[2019:3:20:8:11:5] User entered filename "Specimen_RawData_1.csv"
+[2019:3:20:8:11:5] Appending first derivative column
+[2019:3:20:8:11:5] Slope polarity change. Falling edge
+[2019:3:20:8:11:5] Slope polarity change. Falling edge
+[2019:3:20:8:11:5] Slope polarity change. Falling edge
+[2019:3:20:8:11:5] Slope polarity change. Falling edge
+[2019:3:20:8:11:5] Slope polarity change. Falling edge
+[2019:3:20:8:11:5] Slope polarity change. Falling edge
+[2019:3:20:8:11:5] Slope polarity change. Falling edge
+[2019:3:20:8:11:5] Slope polarity change. Falling edge
+[2019:3:20:8:11:5] Slope polarity change. Falling edge
+[2019:3:20:8:11:5] Slope polarity change. Falling edge
+[2019:3:20:8:11:5] Slope polarity change. Falling edge
+[2019:3:20:8:11:5] Slope polarity change. Falling edge
+[2019:3:20:8:11:5] Slope polarity change. Falling edge
+[2019:3:20:8:11:5] Slope polarity change. Falling edge
+[2019:3:20:8:11:5] Slope polarity change. Falling edge
+[2019:3:20:8:11:5] Slope polarity change. Falling edge
+[2019:3:20:8:11:5] Slope polarity change. Falling edge
+[2019:3:20:8:12:19] User entered directory ""
+[2019:3:20:8:12:21] User entered filename "Specimen_RawData_1.csv"
+[2019:3:20:8:12:21] Appending first derivative column
+[2019:3:20:8:12:21] Slope polarity change. Falling edge
+[2019:3:20:8:12:21] Slope polarity change. Falling edge
+[2019:3:20:8:12:21] Slope polarity change. Falling edge
+[2019:3:20:8:12:21] Slope polarity change. Falling edge
+[2019:3:20:8:12:21] Slope polarity change. Falling edge
+[2019:3:20:8:12:21] Slope polarity change. Falling edge
+[2019:3:20:8:12:21] Slope polarity change. Falling edge
+[2019:3:20:8:12:21] Slope polarity change. Falling edge
+[2019:3:20:8:12:21] Slope polarity change. Falling edge
+[2019:3:20:8:12:21] Slope polarity change. Falling edge
+[2019:3:20:8:12:21] Slope polarity change. Falling edge
+[2019:3:20:8:12:21] Slope polarity change. Falling edge
+[2019:3:20:8:12:21] Slope polarity change. Falling edge
+[2019:3:20:8:12:21] Slope polarity change. Falling edge
+[2019:3:20:8:12:21] Slope polarity change. Falling edge
+[2019:3:20:8:12:21] Slope polarity change. Falling edge
+[2019:3:20:8:12:21] Slope polarity change. Falling edge
+[2019:3:20:8:13:25] User selected "Fetch a list of warrants" from main menu
+[2019:3:20:8:13:30] User selected "Analyze response times" from main menu
+[2019:3:20:8:19:1] Good links
+[2019:3:20:8:19:1] Parametric data folder not found in \\jsjcorp.com\data\GHSP\GH\webdata\Testing\2018\20184450.
+
+[2019:3:20:8:19:1] Bad links
+[2019:3:20:8:19:1] \\jsjcorp.com\data\GHSP\GH\webdata\Testing\2018\20184450
+[2019:3:20:8:24:24] User selected "Step detector" from main menu
+[2019:3:20:8:25:36] User selected "Step detector" from main menu
+[2019:3:20:8:26:35] User selected "Step detector" from main menu
+[2019:3:20:8:27:45] User selected "Step detector" from main menu
+[2019:3:20:8:28:7] User selected "Step detector" from main menu
+[2019:3:20:8:28:51] User selected "Step detector" from main menu
+[2019:3:20:8:29:44] User selected "Step detector" from main menu
+[2019:3:20:8:29:50] User selected "Step detector" from main menu
+[2019:3:20:8:30:13] User selected "Step detector" from main menu
+[2019:3:20:8:30:37] User selected "Step detector" from main menu
+[2019:3:20:8:30:37] Appending first derivative column
+[2019:3:20:8:30:37] Slope polarity change. Falling edge
+[2019:3:20:8:30:37] Slope polarity change. Falling edge
+[2019:3:20:8:30:37] Slope polarity change. Falling edge
+[2019:3:20:8:30:37] Slope polarity change. Falling edge
+[2019:3:20:8:30:37] Slope polarity change. Falling edge
+[2019:3:20:8:30:37] Slope polarity change. Falling edge
+[2019:3:20:8:30:37] Slope polarity change. Falling edge
+[2019:3:20:8:30:37] Slope polarity change. Falling edge
+[2019:3:20:8:30:37] Slope polarity change. Falling edge
+[2019:3:20:8:30:37] Slope polarity change. Falling edge
+[2019:3:20:8:30:37] Slope polarity change. Falling edge
+[2019:3:20:8:30:37] Slope polarity change. Falling edge
+[2019:3:20:8:30:37] Slope polarity change. Falling edge
+[2019:3:20:8:30:37] Slope polarity change. Falling edge
+[2019:3:20:8:30:37] Slope polarity change. Falling edge
+[2019:3:20:8:30:37] Slope polarity change. Falling edge
+[2019:3:20:8:30:37] Slope polarity change. Falling edge
+[2019:3:20:8:38:22] User selected "Step detector" from main menu
+[2019:3:20:8:38:22] Appending first derivative column
+[2019:3:20:8:38:22] Slope polarity change. Falling edge
+[2019:3:20:8:38:22] Slope polarity change. Falling edge
+[2019:3:20:8:38:22] Slope polarity change. Falling edge
+[2019:3:20:8:38:22] Slope polarity change. Falling edge
+[2019:3:20:8:38:22] Slope polarity change. Falling edge
+[2019:3:20:8:38:22] Slope polarity change. Falling edge
+[2019:3:20:8:38:22] Slope polarity change. Falling edge
+[2019:3:20:8:38:22] Slope polarity change. Falling edge
+[2019:3:20:8:38:22] Slope polarity change. Falling edge
+[2019:3:20:8:38:22] Slope polarity change. Falling edge
+[2019:3:20:8:38:22] Slope polarity change. Falling edge
+[2019:3:20:8:38:22] Slope polarity change. Falling edge
+[2019:3:20:8:38:22] Slope polarity change. Falling edge
+[2019:3:20:8:38:22] Slope polarity change. Falling edge
+[2019:3:20:8:38:22] Slope polarity change. Falling edge
+[2019:3:20:8:38:22] Slope polarity change. Falling edge
+[2019:3:20:8:38:22] Slope polarity change. Falling edge
+[2019:3:20:8:39:48] User selected "Step detector" from main menu
+[2019:3:20:8:39:48] Appending first derivative column
+[2019:3:20:8:39:48] Slope polarity change. Falling edge
+[2019:3:20:8:39:48] Slope polarity change. Falling edge
+[2019:3:20:8:39:48] Slope polarity change. Falling edge
+[2019:3:20:8:39:48] Slope polarity change. Falling edge
+[2019:3:20:8:39:48] Slope polarity change. Falling edge
+[2019:3:20:8:39:48] Slope polarity change. Falling edge
+[2019:3:20:8:39:48] Slope polarity change. Falling edge
+[2019:3:20:8:39:48] Slope polarity change. Falling edge
+[2019:3:20:8:39:48] Slope polarity change. Falling edge
+[2019:3:20:8:39:48] Slope polarity change. Falling edge
+[2019:3:20:8:39:48] Slope polarity change. Falling edge
+[2019:3:20:8:39:48] Slope polarity change. Falling edge
+[2019:3:20:8:39:48] Slope polarity change. Falling edge
+[2019:3:20:8:39:48] Slope polarity change. Falling edge
+[2019:3:20:8:39:48] Slope polarity change. Falling edge
+[2019:3:20:8:39:48] Slope polarity change. Falling edge
+[2019:3:20:8:39:48] Slope polarity change. Falling edge
+[2019:3:20:8:44:22] User selected "Step detector" from main menu
+[2019:3:20:8:45:47] User selected "Step detector" from main menu
+[2019:3:20:8:46:30] User selected "Step detector" from main menu
+[2019:3:20:8:47:54] User selected "Step detector" from main menu
+[2019:3:20:8:48:9] Appending first derivative column
+[2019:3:20:8:48:9] Slope polarity change. Falling edge
+[2019:3:20:8:48:9] Slope polarity change. Falling edge
+[2019:3:20:8:48:9] Slope polarity change. Falling edge
+[2019:3:20:8:48:9] Slope polarity change. Falling edge
+[2019:3:20:8:48:9] Slope polarity change. Falling edge
+[2019:3:20:8:48:9] Slope polarity change. Falling edge
+[2019:3:20:8:48:9] Slope polarity change. Falling edge
+[2019:3:20:8:48:9] Slope polarity change. Falling edge
+[2019:3:20:8:48:9] Slope polarity change. Falling edge
+[2019:3:20:8:48:9] Slope polarity change. Falling edge
+[2019:3:20:8:48:9] Slope polarity change. Falling edge
+[2019:3:20:8:48:9] Slope polarity change. Falling edge
+[2019:3:20:8:48:9] Slope polarity change. Falling edge
+[2019:3:20:8:48:9] Slope polarity change. Falling edge
+[2019:3:20:8:48:9] Slope polarity change. Falling edge
+[2019:3:20:8:48:9] Slope polarity change. Falling edge
+[2019:3:20:8:48:9] Slope polarity change. Falling edge
+[2019:3:20:8:49:23] User selected "Step detector" from main menu
+[2019:3:20:8:49:38] Appending first derivative column
+[2019:3:20:8:49:38] Slope polarity change. Falling edge
+[2019:3:20:8:49:38] Slope polarity change. Falling edge
+[2019:3:20:8:49:38] Slope polarity change. Falling edge
+[2019:3:20:8:49:38] Slope polarity change. Falling edge
+[2019:3:20:8:49:38] Slope polarity change. Falling edge
+[2019:3:20:8:49:38] Slope polarity change. Falling edge
+[2019:3:20:8:49:38] Slope polarity change. Falling edge
+[2019:3:20:8:49:38] Slope polarity change. Falling edge
+[2019:3:20:8:49:38] Slope polarity change. Falling edge
+[2019:3:20:8:49:38] Slope polarity change. Falling edge
+[2019:3:20:8:49:38] Slope polarity change. Falling edge
+[2019:3:20:8:49:38] Slope polarity change. Falling edge
+[2019:3:20:8:49:38] Slope polarity change. Falling edge
+[2019:3:20:8:49:38] Slope polarity change. Falling edge
+[2019:3:20:8:49:38] Slope polarity change. Falling edge
+[2019:3:20:8:49:38] Slope polarity change. Falling edge
+[2019:3:20:8:49:38] Slope polarity change. Falling edge
+[2019:3:20:8:51:32] User selected "Step detector" from main menu
+[2019:3:20:8:51:47] Appending first derivative column
+[2019:3:20:8:51:47] Slope polarity change. Falling edge
+[2019:3:20:8:51:47] Slope polarity change. Falling edge
+[2019:3:20:8:51:47] Slope polarity change. Falling edge
+[2019:3:20:8:51:47] Slope polarity change. Falling edge
+[2019:3:20:8:51:47] Slope polarity change. Falling edge
+[2019:3:20:8:51:47] Slope polarity change. Falling edge
+[2019:3:20:8:51:47] Slope polarity change. Falling edge
+[2019:3:20:8:51:47] Slope polarity change. Falling edge
+[2019:3:20:8:51:47] Slope polarity change. Falling edge
+[2019:3:20:8:51:47] Slope polarity change. Falling edge
+[2019:3:20:8:51:47] Slope polarity change. Falling edge
+[2019:3:20:8:51:47] Slope polarity change. Falling edge
+[2019:3:20:8:51:47] Slope polarity change. Falling edge
+[2019:3:20:8:51:47] Slope polarity change. Falling edge
+[2019:3:20:8:51:47] Slope polarity change. Falling edge
+[2019:3:20:8:51:47] Slope polarity change. Falling edge
+[2019:3:20:8:51:47] Slope polarity change. Falling edge
+[2019:3:20:8:54:46] User selected "Step detector" from main menu
+[2019:3:20:8:55:20] User selected "Step detector" from main menu
+[2019:3:20:8:58:30] User selected "Step detector" from main menu
+[2019:3:20:9:2:37] User selected "Step detector" from main menu
+[2019:3:20:9:5:33] User selected "Step detector" from main menu
+[2019:3:20:9:8:30] User selected "Step detector" from main menu
+[2019:3:20:9:21:36] User selected "Step detector" from main menu
+[2019:3:20:9:21:36] Appending first derivative column
+[2019:3:20:9:21:36] Slope polarity change. Falling edge
+[2019:3:20:9:21:36] Slope polarity change. Falling edge
+[2019:3:20:9:21:36] Slope polarity change. Falling edge
+[2019:3:20:9:21:36] Slope polarity change. Falling edge
+[2019:3:20:9:21:36] Slope polarity change. Falling edge
+[2019:3:20:9:21:36] Slope polarity change. Falling edge
+[2019:3:20:9:21:36] Slope polarity change. Falling edge
+[2019:3:20:9:21:36] Appending first derivative column
+[2019:3:20:9:21:36] Slope polarity change. Falling edge
+[2019:3:20:9:21:36] Slope polarity change. Falling edge
+[2019:3:20:9:21:36] Slope polarity change. Falling edge
+[2019:3:20:9:21:36] Slope polarity change. Falling edge
+[2019:3:20:9:21:36] Slope polarity change. Falling edge
+[2019:3:20:9:21:36] Slope polarity change. Falling edge
+[2019:3:20:9:21:36] Appending first derivative column
+[2019:3:20:9:21:36] Slope polarity change. Falling edge
+[2019:3:20:9:21:36] Slope polarity change. Falling edge
+[2019:3:20:9:21:36] Slope polarity change. Falling edge
+[2019:3:20:9:21:36] Slope polarity change. Falling edge
+[2019:3:20:9:21:36] Slope polarity change. Falling edge
+[2019:3:20:9:21:36] Slope polarity change. Falling edge
+[2019:3:20:9:21:36] Slope polarity change. Falling edge
+[2019:3:20:9:21:36] Appending first derivative column
+[2019:3:20:9:21:36] Slope polarity change. Falling edge
+[2019:3:20:9:21:36] Slope polarity change. Falling edge
+[2019:3:20:9:21:36] Slope polarity change. Falling edge
+[2019:3:20:9:21:36] Slope polarity change. Falling edge
+[2019:3:20:9:21:36] Slope polarity change. Falling edge
+[2019:3:20:9:21:36] Appending first derivative column
+[2019:3:20:9:21:36] Slope polarity change. Falling edge
+[2019:3:20:9:21:36] Slope polarity change. Falling edge
+[2019:3:20:9:21:36] Appending first derivative column
+[2019:3:20:9:21:36] Slope polarity change. Falling edge
+[2019:3:20:9:21:36] Slope polarity change. Falling edge
+[2019:3:20:9:21:36] Slope polarity change. Falling edge
+[2019:3:20:9:21:36] Slope polarity change. Falling edge
+[2019:3:20:9:21:36] Slope polarity change. Falling edge
+[2019:3:20:9:21:36] Slope polarity change. Falling edge
+[2019:3:20:9:21:36] Slope polarity change. Falling edge
+[2019:3:20:9:21:36] Appending first derivative column
+[2019:3:20:9:21:36] Slope polarity change. Falling edge
+[2019:3:20:9:21:36] Slope polarity change. Falling edge
+[2019:3:20:9:21:36] Slope polarity change. Falling edge
+[2019:3:20:9:21:36] Slope polarity change. Falling edge
+[2019:3:20:9:21:36] Slope polarity change. Falling edge
+[2019:3:20:9:21:36] Slope polarity change. Falling edge
+[2019:3:20:9:21:36] Slope polarity change. Falling edge
+[2019:3:20:9:21:36] Slope polarity change. Falling edge
+[2019:3:20:9:21:36] Appending first derivative column
+[2019:3:20:9:21:36] Slope polarity change. Falling edge
+[2019:3:20:9:21:36] Slope polarity change. Falling edge
+[2019:3:20:9:21:36] Slope polarity change. Falling edge
+[2019:3:20:9:21:36] Slope polarity change. Falling edge
+[2019:3:20:9:21:36] Slope polarity change. Falling edge
+[2019:3:20:9:21:36] Slope polarity change. Falling edge
+[2019:3:20:9:21:36] Slope polarity change. Falling edge
+[2019:3:20:9:21:36] Appending first derivative column
+[2019:3:20:9:21:36] Slope polarity change. Falling edge
+[2019:3:20:9:21:36] Slope polarity change. Falling edge
+[2019:3:20:9:21:36] Slope polarity change. Falling edge
+[2019:3:20:9:21:36] Slope polarity change. Falling edge
+[2019:3:20:9:21:36] Slope polarity change. Falling edge
+[2019:3:20:9:21:36] Slope polarity change. Falling edge
+[2019:3:20:9:21:36] Slope polarity change. Falling edge
+[2019:3:20:9:21:36] Appending first derivative column
+[2019:3:20:9:21:36] Slope polarity change. Falling edge
+[2019:3:20:9:21:36] Slope polarity change. Falling edge
+[2019:3:20:9:21:36] Slope polarity change. Falling edge
+[2019:3:20:9:21:36] Slope polarity change. Falling edge
+[2019:3:20:9:21:36] Slope polarity change. Falling edge
+[2019:3:20:9:21:36] Appending first derivative column
+[2019:3:20:9:21:36] Slope polarity change. Falling edge
+[2019:3:20:9:21:36] Slope polarity change. Falling edge
+[2019:3:20:9:21:36] Slope polarity change. Falling edge
+[2019:3:20:9:21:36] Slope polarity change. Falling edge
+[2019:3:20:9:21:36] Slope polarity change. Falling edge
+[2019:3:20:9:21:36] Slope polarity change. Falling edge
+[2019:3:20:9:21:36] Slope polarity change. Falling edge
+[2019:3:20:9:21:36] Slope polarity change. Falling edge
+[2019:3:20:9:21:36] Slope polarity change. Falling edge
+[2019:3:20:9:21:36] Slope polarity change. Falling edge
+[2019:3:20:9:21:36] Appending first derivative column
+[2019:3:20:9:21:36] Slope polarity change. Falling edge
+[2019:3:20:9:21:36] Slope polarity change. Falling edge
+[2019:3:20:9:21:36] Slope polarity change. Falling edge
+[2019:3:20:9:21:36] Slope polarity change. Falling edge
+[2019:3:20:9:21:36] Slope polarity change. Falling edge
+[2019:3:20:9:21:36] Slope polarity change. Falling edge
+[2019:3:20:9:21:36] Slope polarity change. Falling edge
+[2019:3:20:9:21:36] Slope polarity change. Falling edge
+[2019:3:20:9:21:36] Slope polarity change. Falling edge
+[2019:3:20:9:21:36] Slope polarity change. Falling edge
+[2019:3:20:9:21:36] Slope polarity change. Falling edge
+[2019:3:20:9:21:36] Slope polarity change. Falling edge
+[2019:3:20:9:21:36] Appending first derivative column
+[2019:3:20:9:21:36] Slope polarity change. Falling edge
+[2019:3:20:9:21:36] Slope polarity change. Falling edge
+[2019:3:20:9:21:36] Slope polarity change. Falling edge
+[2019:3:20:9:21:36] Appending first derivative column
+[2019:3:20:9:21:36] Slope polarity change. Falling edge
+[2019:3:20:9:21:36] Slope polarity change. Falling edge
+[2019:3:20:9:21:36] Slope polarity change. Falling edge
+[2019:3:20:9:21:36] Slope polarity change. Falling edge
+[2019:3:20:9:21:36] Slope polarity change. Falling edge
+[2019:3:20:9:21:36] Slope polarity change. Falling edge
+[2019:3:20:9:21:36] Slope polarity change. Falling edge
+[2019:3:20:9:21:36] Slope polarity change. Falling edge
+[2019:3:20:9:21:36] Appending first derivative column
+[2019:3:20:9:21:36] Slope polarity change. Falling edge
+[2019:3:20:9:21:36] Slope polarity change. Falling edge
+[2019:3:20:9:21:36] Slope polarity change. Falling edge
+[2019:3:20:9:21:36] Slope polarity change. Falling edge
+[2019:3:20:9:21:36] Slope polarity change. Falling edge
+[2019:3:20:9:21:36] Slope polarity change. Falling edge
+[2019:3:20:9:21:36] Slope polarity change. Falling edge
+[2019:3:20:9:21:36] Slope polarity change. Falling edge
+[2019:3:20:9:21:36] Slope polarity change. Falling edge
+[2019:3:20:9:21:36] Slope polarity change. Falling edge
+[2019:3:20:9:21:36] Slope polarity change. Falling edge
+[2019:3:20:9:21:36] Slope polarity change. Falling edge
+[2019:3:20:9:21:36] Slope polarity change. Falling edge
+[2019:3:20:9:21:36] Slope polarity change. Falling edge
+[2019:3:20:9:21:36] Appending first derivative column
+[2019:3:20:9:21:36] Slope polarity change. Falling edge
+[2019:3:20:9:21:36] Slope polarity change. Falling edge
+[2019:3:20:9:21:36] Slope polarity change. Falling edge
+[2019:3:20:9:21:36] Slope polarity change. Falling edge
+[2019:3:20:9:21:36] Slope polarity change. Falling edge
+[2019:3:20:9:21:36] Slope polarity change. Falling edge
+[2019:3:20:9:21:36] Slope polarity change. Falling edge
+[2019:3:20:9:21:36] Slope polarity change. Falling edge
+[2019:3:20:9:21:36] Slope polarity change. Falling edge
+[2019:3:20:9:21:36] Slope polarity change. Falling edge
+[2019:3:20:9:21:36] Slope polarity change. Falling edge
+[2019:3:20:9:21:36] Slope polarity change. Falling edge
+[2019:3:20:9:21:36] Slope polarity change. Falling edge
+[2019:3:20:9:21:36] Appending first derivative column
+[2019:3:20:9:21:36] Slope polarity change. Falling edge
+[2019:3:20:9:21:36] Slope polarity change. Falling edge
+[2019:3:20:9:21:36] Slope polarity change. Falling edge
+[2019:3:20:9:21:36] Slope polarity change. Falling edge
+[2019:3:20:9:21:36] Slope polarity change. Falling edge
+[2019:3:20:9:21:36] Slope polarity change. Falling edge
+[2019:3:20:9:21:36] Slope polarity change. Falling edge
+[2019:3:20:9:21:36] Slope polarity change. Falling edge
+[2019:3:20:9:21:36] Slope polarity change. Falling edge
+[2019:3:20:9:21:36] Slope polarity change. Falling edge
+[2019:3:20:9:21:36] Appending first derivative column
+[2019:3:20:9:21:36] Slope polarity change. Falling edge
+[2019:3:20:9:21:36] Slope polarity change. Falling edge
+[2019:3:20:9:21:36] Slope polarity change. Falling edge
+[2019:3:20:9:21:36] Slope polarity change. Falling edge
+[2019:3:20:9:21:36] Slope polarity change. Falling edge
+[2019:3:20:9:21:36] Slope polarity change. Falling edge
+[2019:3:20:9:21:36] Slope polarity change. Falling edge
+[2019:3:20:9:21:36] Slope polarity change. Falling edge
+[2019:3:20:9:21:36] Slope polarity change. Falling edge
+[2019:3:20:9:21:36] Slope polarity change. Falling edge
+[2019:3:20:9:21:36] Slope polarity change. Falling edge
+[2019:3:20:9:21:36] Appending first derivative column
+[2019:3:20:9:21:36] Slope polarity change. Falling edge
+[2019:3:20:9:21:36] Slope polarity change. Falling edge
+[2019:3:20:9:21:36] Slope polarity change. Falling edge
+[2019:3:20:9:21:36] Slope polarity change. Falling edge
+[2019:3:20:9:21:36] Slope polarity change. Falling edge
+[2019:3:20:9:21:36] Appending first derivative column
+[2019:3:20:9:21:36] Slope polarity change. Falling edge
+[2019:3:20:9:21:36] Slope polarity change. Falling edge
+[2019:3:20:9:21:36] Slope polarity change. Falling edge
+[2019:3:20:9:21:36] Slope polarity change. Falling edge
+[2019:3:20:9:21:36] Slope polarity change. Falling edge
+[2019:3:20:9:21:36] Slope polarity change. Falling edge
+[2019:3:20:9:21:36] Slope polarity change. Falling edge
+[2019:3:20:9:21:36] Slope polarity change. Falling edge
+[2019:3:20:9:21:36] Appending first derivative column
+[2019:3:20:9:21:36] Slope polarity change. Falling edge
+[2019:3:20:9:21:36] Slope polarity change. Falling edge
+[2019:3:20:9:21:36] Slope polarity change. Falling edge
+[2019:3:20:9:21:36] Slope polarity change. Falling edge
+[2019:3:20:9:21:37] Appending first derivative column
+[2019:3:20:9:21:37] Slope polarity change. Falling edge
+[2019:3:20:9:21:37] Slope polarity change. Falling edge
+[2019:3:20:9:21:37] Slope polarity change. Falling edge
+[2019:3:20:9:21:37] Slope polarity change. Falling edge
+[2019:3:20:9:21:37] Slope polarity change. Falling edge
+[2019:3:20:9:21:37] Slope polarity change. Falling edge
+[2019:3:20:9:24:9] User selected "Step detector" from main menu
+[2019:3:20:9:24:9] Appending first derivative column
+[2019:3:20:9:24:9] Slope polarity change. Falling edge
+[2019:3:20:9:24:9] Slope polarity change. Falling edge
+[2019:3:20:9:24:9] Slope polarity change. Falling edge
+[2019:3:20:9:24:9] Slope polarity change. Falling edge
+[2019:3:20:9:24:9] Slope polarity change. Falling edge
+[2019:3:20:9:24:9] Slope polarity change. Falling edge
+[2019:3:20:9:24:9] Slope polarity change. Falling edge
+[2019:3:20:9:24:9] Appending first derivative column
+[2019:3:20:9:24:9] Slope polarity change. Falling edge
+[2019:3:20:9:24:9] Slope polarity change. Falling edge
+[2019:3:20:9:24:9] Slope polarity change. Falling edge
+[2019:3:20:9:24:9] Slope polarity change. Falling edge
+[2019:3:20:9:24:9] Slope polarity change. Falling edge
+[2019:3:20:9:24:9] Slope polarity change. Falling edge
+[2019:3:20:9:24:24] Appending first derivative column
+[2019:3:20:9:24:24] Slope polarity change. Falling edge
+[2019:3:20:9:24:24] Slope polarity change. Falling edge
+[2019:3:20:9:24:24] Slope polarity change. Falling edge
+[2019:3:20:9:24:24] Slope polarity change. Falling edge
+[2019:3:20:9:24:24] Slope polarity change. Falling edge
+[2019:3:20:9:24:24] Slope polarity change. Falling edge
+[2019:3:20:9:24:24] Slope polarity change. Falling edge
+[2019:3:20:9:24:39] Appending first derivative column
+[2019:3:20:9:24:39] Slope polarity change. Falling edge
+[2019:3:20:9:24:39] Slope polarity change. Falling edge
+[2019:3:20:9:24:39] Slope polarity change. Falling edge
+[2019:3:20:9:24:39] Slope polarity change. Falling edge
+[2019:3:20:9:24:39] Slope polarity change. Falling edge
+[2019:3:20:9:24:54] Appending first derivative column
+[2019:3:20:9:24:54] Slope polarity change. Falling edge
+[2019:3:20:9:24:54] Slope polarity change. Falling edge
+[2019:3:20:9:25:18] User selected "Step detector" from main menu
+[2019:3:20:9:25:18] Appending first derivative column
+[2019:3:20:9:25:18] Slope polarity change. Falling edge
+[2019:3:20:9:25:18] Slope polarity change. Falling edge
+[2019:3:20:9:25:18] Slope polarity change. Falling edge
+[2019:3:20:9:25:18] Slope polarity change. Falling edge
+[2019:3:20:9:25:18] Slope polarity change. Falling edge
+[2019:3:20:9:25:18] Slope polarity change. Falling edge
+[2019:3:20:9:25:18] Slope polarity change. Falling edge
+[2019:3:20:9:25:18] Appending first derivative column
+[2019:3:20:9:25:18] Slope polarity change. Falling edge
+[2019:3:20:9:25:18] Slope polarity change. Falling edge
+[2019:3:20:9:25:18] Slope polarity change. Falling edge
+[2019:3:20:9:25:18] Slope polarity change. Falling edge
+[2019:3:20:9:25:18] Slope polarity change. Falling edge
+[2019:3:20:9:25:18] Slope polarity change. Falling edge
+[2019:3:20:9:26:43] User selected "Step detector" from main menu
+[2019:3:20:9:26:43] Appending first derivative column
+[2019:3:20:9:26:43] Slope polarity change. Falling edge
+[2019:3:20:9:26:43] Slope polarity change. Falling edge
+[2019:3:20:9:26:43] Slope polarity change. Falling edge
+[2019:3:20:9:26:43] Slope polarity change. Falling edge
+[2019:3:20:9:26:43] Slope polarity change. Falling edge
+[2019:3:20:9:26:43] Slope polarity change. Falling edge
+[2019:3:20:9:26:43] Slope polarity change. Falling edge
+[2019:3:20:9:26:43] Appending first derivative column
+[2019:3:20:9:26:43] Slope polarity change. Falling edge
+[2019:3:20:9:26:43] Slope polarity change. Falling edge
+[2019:3:20:9:26:43] Slope polarity change. Falling edge
+[2019:3:20:9:26:43] Slope polarity change. Falling edge
+[2019:3:20:9:26:43] Slope polarity change. Falling edge
+[2019:3:20:9:26:43] Slope polarity change. Falling edge
+[2019:3:20:9:26:43] Appending first derivative column
+[2019:3:20:9:26:43] Slope polarity change. Falling edge
+[2019:3:20:9:26:43] Slope polarity change. Falling edge
+[2019:3:20:9:26:43] Slope polarity change. Falling edge
+[2019:3:20:9:26:43] Slope polarity change. Falling edge
+[2019:3:20:9:26:43] Slope polarity change. Falling edge
+[2019:3:20:9:26:43] Slope polarity change. Falling edge
+[2019:3:20:9:26:43] Slope polarity change. Falling edge
+[2019:3:20:9:26:43] Appending first derivative column
+[2019:3:20:9:26:43] Slope polarity change. Falling edge
+[2019:3:20:9:26:43] Slope polarity change. Falling edge
+[2019:3:20:9:26:43] Slope polarity change. Falling edge
+[2019:3:20:9:26:43] Slope polarity change. Falling edge
+[2019:3:20:9:26:43] Slope polarity change. Falling edge
+[2019:3:20:9:26:43] Appending first derivative column
+[2019:3:20:9:26:43] Slope polarity change. Falling edge
+[2019:3:20:9:26:43] Slope polarity change. Falling edge
+[2019:3:20:9:26:43] Appending first derivative column
+[2019:3:20:9:26:43] Slope polarity change. Falling edge
+[2019:3:20:9:26:43] Slope polarity change. Falling edge
+[2019:3:20:9:26:43] Slope polarity change. Falling edge
+[2019:3:20:9:26:43] Slope polarity change. Falling edge
+[2019:3:20:9:26:43] Slope polarity change. Falling edge
+[2019:3:20:9:26:43] Slope polarity change. Falling edge
+[2019:3:20:9:26:43] Slope polarity change. Falling edge
+[2019:3:20:9:26:43] Appending first derivative column
+[2019:3:20:9:26:43] Slope polarity change. Falling edge
+[2019:3:20:9:26:43] Slope polarity change. Falling edge
+[2019:3:20:9:26:43] Slope polarity change. Falling edge
+[2019:3:20:9:26:43] Slope polarity change. Falling edge
+[2019:3:20:9:26:43] Slope polarity change. Falling edge
+[2019:3:20:9:26:43] Slope polarity change. Falling edge
+[2019:3:20:9:26:43] Slope polarity change. Falling edge
+[2019:3:20:9:26:44] Slope polarity change. Falling edge
+[2019:3:20:9:26:44] Appending first derivative column
+[2019:3:20:9:26:44] Slope polarity change. Falling edge
+[2019:3:20:9:26:44] Slope polarity change. Falling edge
+[2019:3:20:9:26:44] Slope polarity change. Falling edge
+[2019:3:20:9:26:44] Slope polarity change. Falling edge
+[2019:3:20:9:26:44] Slope polarity change. Falling edge
+[2019:3:20:9:26:44] Slope polarity change. Falling edge
+[2019:3:20:9:26:44] Slope polarity change. Falling edge
+[2019:3:20:9:26:44] Appending first derivative column
+[2019:3:20:9:26:44] Slope polarity change. Falling edge
+[2019:3:20:9:26:44] Slope polarity change. Falling edge
+[2019:3:20:9:26:44] Slope polarity change. Falling edge
+[2019:3:20:9:26:44] Slope polarity change. Falling edge
+[2019:3:20:9:26:44] Slope polarity change. Falling edge
+[2019:3:20:9:26:44] Slope polarity change. Falling edge
+[2019:3:20:9:26:44] Slope polarity change. Falling edge
+[2019:3:20:9:26:44] Appending first derivative column
+[2019:3:20:9:26:44] Slope polarity change. Falling edge
+[2019:3:20:9:26:44] Slope polarity change. Falling edge
+[2019:3:20:9:26:44] Slope polarity change. Falling edge
+[2019:3:20:9:26:44] Slope polarity change. Falling edge
+[2019:3:20:9:26:44] Slope polarity change. Falling edge
+[2019:3:20:9:26:44] Appending first derivative column
+[2019:3:20:9:26:44] Slope polarity change. Falling edge
+[2019:3:20:9:26:44] Slope polarity change. Falling edge
+[2019:3:20:9:26:44] Slope polarity change. Falling edge
+[2019:3:20:9:26:44] Slope polarity change. Falling edge
+[2019:3:20:9:26:44] Slope polarity change. Falling edge
+[2019:3:20:9:26:44] Slope polarity change. Falling edge
+[2019:3:20:9:26:44] Slope polarity change. Falling edge
+[2019:3:20:9:26:44] Slope polarity change. Falling edge
+[2019:3:20:9:26:44] Slope polarity change. Falling edge
+[2019:3:20:9:26:44] Slope polarity change. Falling edge
+[2019:3:20:9:26:44] Appending first derivative column
+[2019:3:20:9:26:44] Slope polarity change. Falling edge
+[2019:3:20:9:26:44] Slope polarity change. Falling edge
+[2019:3:20:9:26:44] Slope polarity change. Falling edge
+[2019:3:20:9:26:44] Slope polarity change. Falling edge
+[2019:3:20:9:26:44] Slope polarity change. Falling edge
+[2019:3:20:9:26:44] Slope polarity change. Falling edge
+[2019:3:20:9:26:44] Slope polarity change. Falling edge
+[2019:3:20:9:26:44] Slope polarity change. Falling edge
+[2019:3:20:9:26:44] Slope polarity change. Falling edge
+[2019:3:20:9:26:44] Slope polarity change. Falling edge
+[2019:3:20:9:26:44] Slope polarity change. Falling edge
+[2019:3:20:9:26:44] Slope polarity change. Falling edge
+[2019:3:20:9:26:44] Appending first derivative column
+[2019:3:20:9:26:44] Slope polarity change. Falling edge
+[2019:3:20:9:26:44] Slope polarity change. Falling edge
+[2019:3:20:9:26:44] Slope polarity change. Falling edge
+[2019:3:20:9:26:44] Appending first derivative column
+[2019:3:20:9:26:44] Slope polarity change. Falling edge
+[2019:3:20:9:26:44] Slope polarity change. Falling edge
+[2019:3:20:9:26:44] Slope polarity change. Falling edge
+[2019:3:20:9:26:44] Slope polarity change. Falling edge
+[2019:3:20:9:26:44] Slope polarity change. Falling edge
+[2019:3:20:9:26:44] Slope polarity change. Falling edge
+[2019:3:20:9:26:44] Slope polarity change. Falling edge
+[2019:3:20:9:26:44] Slope polarity change. Falling edge
+[2019:3:20:9:26:44] Appending first derivative column
+[2019:3:20:9:26:44] Slope polarity change. Falling edge
+[2019:3:20:9:26:44] Slope polarity change. Falling edge
+[2019:3:20:9:26:44] Slope polarity change. Falling edge
+[2019:3:20:9:26:44] Slope polarity change. Falling edge
+[2019:3:20:9:26:44] Slope polarity change. Falling edge
+[2019:3:20:9:26:44] Slope polarity change. Falling edge
+[2019:3:20:9:26:44] Slope polarity change. Falling edge
+[2019:3:20:9:26:44] Slope polarity change. Falling edge
+[2019:3:20:9:26:44] Slope polarity change. Falling edge
+[2019:3:20:9:26:44] Slope polarity change. Falling edge
+[2019:3:20:9:26:44] Slope polarity change. Falling edge
+[2019:3:20:9:26:44] Slope polarity change. Falling edge
+[2019:3:20:9:26:44] Slope polarity change. Falling edge
+[2019:3:20:9:26:44] Slope polarity change. Falling edge
+[2019:3:20:9:26:44] Appending first derivative column
+[2019:3:20:9:26:44] Slope polarity change. Falling edge
+[2019:3:20:9:26:44] Slope polarity change. Falling edge
+[2019:3:20:9:26:44] Slope polarity change. Falling edge
+[2019:3:20:9:26:44] Slope polarity change. Falling edge
+[2019:3:20:9:26:44] Slope polarity change. Falling edge
+[2019:3:20:9:26:44] Slope polarity change. Falling edge
+[2019:3:20:9:26:44] Slope polarity change. Falling edge
+[2019:3:20:9:26:44] Slope polarity change. Falling edge
+[2019:3:20:9:26:44] Slope polarity change. Falling edge
+[2019:3:20:9:26:44] Slope polarity change. Falling edge
+[2019:3:20:9:26:44] Slope polarity change. Falling edge
+[2019:3:20:9:26:44] Slope polarity change. Falling edge
+[2019:3:20:9:26:44] Slope polarity change. Falling edge
+[2019:3:20:9:26:44] Appending first derivative column
+[2019:3:20:9:26:44] Slope polarity change. Falling edge
+[2019:3:20:9:26:44] Slope polarity change. Falling edge
+[2019:3:20:9:26:44] Slope polarity change. Falling edge
+[2019:3:20:9:26:44] Slope polarity change. Falling edge
+[2019:3:20:9:26:44] Slope polarity change. Falling edge
+[2019:3:20:9:26:44] Slope polarity change. Falling edge
+[2019:3:20:9:26:44] Slope polarity change. Falling edge
+[2019:3:20:9:26:44] Slope polarity change. Falling edge
+[2019:3:20:9:26:44] Slope polarity change. Falling edge
+[2019:3:20:9:26:44] Slope polarity change. Falling edge
+[2019:3:20:9:26:44] Appending first derivative column
+[2019:3:20:9:26:44] Slope polarity change. Falling edge
+[2019:3:20:9:26:44] Slope polarity change. Falling edge
+[2019:3:20:9:26:44] Slope polarity change. Falling edge
+[2019:3:20:9:26:44] Slope polarity change. Falling edge
+[2019:3:20:9:26:44] Slope polarity change. Falling edge
+[2019:3:20:9:26:44] Slope polarity change. Falling edge
+[2019:3:20:9:26:44] Slope polarity change. Falling edge
+[2019:3:20:9:26:44] Slope polarity change. Falling edge
+[2019:3:20:9:26:44] Slope polarity change. Falling edge
+[2019:3:20:9:26:44] Slope polarity change. Falling edge
+[2019:3:20:9:26:44] Slope polarity change. Falling edge
+[2019:3:20:9:26:44] Appending first derivative column
+[2019:3:20:9:26:44] Slope polarity change. Falling edge
+[2019:3:20:9:26:44] Slope polarity change. Falling edge
+[2019:3:20:9:26:44] Slope polarity change. Falling edge
+[2019:3:20:9:26:44] Slope polarity change. Falling edge
+[2019:3:20:9:26:44] Slope polarity change. Falling edge
+[2019:3:20:9:26:44] Appending first derivative column
+[2019:3:20:9:26:44] Slope polarity change. Falling edge
+[2019:3:20:9:26:44] Slope polarity change. Falling edge
+[2019:3:20:9:26:44] Slope polarity change. Falling edge
+[2019:3:20:9:26:44] Slope polarity change. Falling edge
+[2019:3:20:9:26:44] Slope polarity change. Falling edge
+[2019:3:20:9:26:44] Slope polarity change. Falling edge
+[2019:3:20:9:26:44] Slope polarity change. Falling edge
+[2019:3:20:9:26:44] Slope polarity change. Falling edge
+[2019:3:20:9:26:44] Appending first derivative column
+[2019:3:20:9:26:44] Slope polarity change. Falling edge
+[2019:3:20:9:26:44] Slope polarity change. Falling edge
+[2019:3:20:9:26:44] Slope polarity change. Falling edge
+[2019:3:20:9:26:44] Slope polarity change. Falling edge
+[2019:3:20:9:26:44] Appending first derivative column
+[2019:3:20:9:26:44] Slope polarity change. Falling edge
+[2019:3:20:9:26:44] Slope polarity change. Falling edge
+[2019:3:20:9:26:44] Slope polarity change. Falling edge
+[2019:3:20:9:26:44] Slope polarity change. Falling edge
+[2019:3:20:9:26:44] Slope polarity change. Falling edge
+[2019:3:20:9:26:44] Slope polarity change. Falling edge
+[2019:3:20:9:27:36] User selected "Step detector" from main menu
+[2019:3:20:9:27:36] Appending first derivative column
+[2019:3:20:9:27:36] Slope polarity change. Falling edge
+[2019:3:20:9:27:36] Slope polarity change. Falling edge
+[2019:3:20:9:27:36] Slope polarity change. Falling edge
+[2019:3:20:9:27:36] Slope polarity change. Falling edge
+[2019:3:20:9:27:36] Slope polarity change. Falling edge
+[2019:3:20:9:27:36] Slope polarity change. Falling edge
+[2019:3:20:9:27:36] Slope polarity change. Falling edge
+[2019:3:20:9:27:36] Appending first derivative column
+[2019:3:20:9:27:36] Slope polarity change. Falling edge
+[2019:3:20:9:27:36] Slope polarity change. Falling edge
+[2019:3:20:9:27:36] Slope polarity change. Falling edge
+[2019:3:20:9:27:36] Slope polarity change. Falling edge
+[2019:3:20:9:27:36] Slope polarity change. Falling edge
+[2019:3:20:9:27:36] Slope polarity change. Falling edge
+[2019:3:20:9:27:36] Appending first derivative column
+[2019:3:20:9:27:36] Slope polarity change. Falling edge
+[2019:3:20:9:27:36] Slope polarity change. Falling edge
+[2019:3:20:9:27:36] Slope polarity change. Falling edge
+[2019:3:20:9:27:36] Slope polarity change. Falling edge
+[2019:3:20:9:27:36] Slope polarity change. Falling edge
+[2019:3:20:9:27:36] Slope polarity change. Falling edge
+[2019:3:20:9:27:36] Slope polarity change. Falling edge
+[2019:3:20:9:27:36] Appending first derivative column
+[2019:3:20:9:27:36] Slope polarity change. Falling edge
+[2019:3:20:9:27:36] Slope polarity change. Falling edge
+[2019:3:20:9:27:36] Slope polarity change. Falling edge
+[2019:3:20:9:27:36] Slope polarity change. Falling edge
+[2019:3:20:9:27:36] Slope polarity change. Falling edge
+[2019:3:20:9:27:36] Appending first derivative column
+[2019:3:20:9:27:36] Slope polarity change. Falling edge
+[2019:3:20:9:27:36] Slope polarity change. Falling edge
+[2019:3:20:9:27:36] Appending first derivative column
+[2019:3:20:9:27:36] Slope polarity change. Falling edge
+[2019:3:20:9:27:36] Slope polarity change. Falling edge
+[2019:3:20:9:27:36] Slope polarity change. Falling edge
+[2019:3:20:9:27:36] Slope polarity change. Falling edge
+[2019:3:20:9:27:36] Slope polarity change. Falling edge
+[2019:3:20:9:27:36] Slope polarity change. Falling edge
+[2019:3:20:9:27:36] Slope polarity change. Falling edge
+[2019:3:20:9:27:36] Appending first derivative column
+[2019:3:20:9:27:36] Slope polarity change. Falling edge
+[2019:3:20:9:27:36] Slope polarity change. Falling edge
+[2019:3:20:9:27:36] Slope polarity change. Falling edge
+[2019:3:20:9:27:36] Slope polarity change. Falling edge
+[2019:3:20:9:27:36] Slope polarity change. Falling edge
+[2019:3:20:9:27:36] Slope polarity change. Falling edge
+[2019:3:20:9:27:36] Slope polarity change. Falling edge
+[2019:3:20:9:27:36] Slope polarity change. Falling edge
+[2019:3:20:9:27:36] Appending first derivative column
+[2019:3:20:9:27:36] Slope polarity change. Falling edge
+[2019:3:20:9:27:36] Slope polarity change. Falling edge
+[2019:3:20:9:27:36] Slope polarity change. Falling edge
+[2019:3:20:9:27:36] Slope polarity change. Falling edge
+[2019:3:20:9:27:36] Slope polarity change. Falling edge
+[2019:3:20:9:27:36] Slope polarity change. Falling edge
+[2019:3:20:9:27:36] Slope polarity change. Falling edge
+[2019:3:20:9:27:36] Appending first derivative column
+[2019:3:20:9:27:36] Slope polarity change. Falling edge
+[2019:3:20:9:27:36] Slope polarity change. Falling edge
+[2019:3:20:9:27:36] Slope polarity change. Falling edge
+[2019:3:20:9:27:36] Slope polarity change. Falling edge
+[2019:3:20:9:27:36] Slope polarity change. Falling edge
+[2019:3:20:9:27:36] Slope polarity change. Falling edge
+[2019:3:20:9:27:36] Slope polarity change. Falling edge
+[2019:3:20:9:27:36] Appending first derivative column
+[2019:3:20:9:27:36] Slope polarity change. Falling edge
+[2019:3:20:9:27:36] Slope polarity change. Falling edge
+[2019:3:20:9:27:36] Slope polarity change. Falling edge
+[2019:3:20:9:27:36] Slope polarity change. Falling edge
+[2019:3:20:9:27:36] Slope polarity change. Falling edge
+[2019:3:20:9:27:36] Appending first derivative column
+[2019:3:20:9:27:36] Slope polarity change. Falling edge
+[2019:3:20:9:27:36] Slope polarity change. Falling edge
+[2019:3:20:9:27:36] Slope polarity change. Falling edge
+[2019:3:20:9:27:36] Slope polarity change. Falling edge
+[2019:3:20:9:27:36] Slope polarity change. Falling edge
+[2019:3:20:9:27:36] Slope polarity change. Falling edge
+[2019:3:20:9:27:36] Slope polarity change. Falling edge
+[2019:3:20:9:27:36] Slope polarity change. Falling edge
+[2019:3:20:9:27:36] Slope polarity change. Falling edge
+[2019:3:20:9:27:36] Slope polarity change. Falling edge
+[2019:3:20:9:27:36] Appending first derivative column
+[2019:3:20:9:27:36] Slope polarity change. Falling edge
+[2019:3:20:9:27:36] Slope polarity change. Falling edge
+[2019:3:20:9:27:36] Slope polarity change. Falling edge
+[2019:3:20:9:27:36] Slope polarity change. Falling edge
+[2019:3:20:9:27:36] Slope polarity change. Falling edge
+[2019:3:20:9:27:36] Slope polarity change. Falling edge
+[2019:3:20:9:27:36] Slope polarity change. Falling edge
+[2019:3:20:9:27:36] Slope polarity change. Falling edge
+[2019:3:20:9:27:36] Slope polarity change. Falling edge
+[2019:3:20:9:27:36] Slope polarity change. Falling edge
+[2019:3:20:9:27:36] Slope polarity change. Falling edge
+[2019:3:20:9:27:36] Slope polarity change. Falling edge
+[2019:3:20:9:27:36] Appending first derivative column
+[2019:3:20:9:27:36] Slope polarity change. Falling edge
+[2019:3:20:9:27:36] Slope polarity change. Falling edge
+[2019:3:20:9:27:36] Slope polarity change. Falling edge
+[2019:3:20:9:27:36] Appending first derivative column
+[2019:3:20:9:27:36] Slope polarity change. Falling edge
+[2019:3:20:9:27:36] Slope polarity change. Falling edge
+[2019:3:20:9:27:36] Slope polarity change. Falling edge
+[2019:3:20:9:27:36] Slope polarity change. Falling edge
+[2019:3:20:9:27:36] Slope polarity change. Falling edge
+[2019:3:20:9:27:36] Slope polarity change. Falling edge
+[2019:3:20:9:27:36] Slope polarity change. Falling edge
+[2019:3:20:9:27:36] Slope polarity change. Falling edge
+[2019:3:20:9:27:36] Appending first derivative column
+[2019:3:20:9:27:36] Slope polarity change. Falling edge
+[2019:3:20:9:27:36] Slope polarity change. Falling edge
+[2019:3:20:9:27:36] Slope polarity change. Falling edge
+[2019:3:20:9:27:36] Slope polarity change. Falling edge
+[2019:3:20:9:27:36] Slope polarity change. Falling edge
+[2019:3:20:9:27:36] Slope polarity change. Falling edge
+[2019:3:20:9:27:36] Slope polarity change. Falling edge
+[2019:3:20:9:27:36] Slope polarity change. Falling edge
+[2019:3:20:9:27:36] Slope polarity change. Falling edge
+[2019:3:20:9:27:36] Slope polarity change. Falling edge
+[2019:3:20:9:27:36] Slope polarity change. Falling edge
+[2019:3:20:9:27:36] Slope polarity change. Falling edge
+[2019:3:20:9:27:36] Slope polarity change. Falling edge
+[2019:3:20:9:27:36] Slope polarity change. Falling edge
+[2019:3:20:9:27:36] Appending first derivative column
+[2019:3:20:9:27:36] Slope polarity change. Falling edge
+[2019:3:20:9:27:36] Slope polarity change. Falling edge
+[2019:3:20:9:27:36] Slope polarity change. Falling edge
+[2019:3:20:9:27:36] Slope polarity change. Falling edge
+[2019:3:20:9:27:36] Slope polarity change. Falling edge
+[2019:3:20:9:27:36] Slope polarity change. Falling edge
+[2019:3:20:9:27:36] Slope polarity change. Falling edge
+[2019:3:20:9:27:36] Slope polarity change. Falling edge
+[2019:3:20:9:27:36] Slope polarity change. Falling edge
+[2019:3:20:9:27:36] Slope polarity change. Falling edge
+[2019:3:20:9:27:36] Slope polarity change. Falling edge
+[2019:3:20:9:27:36] Slope polarity change. Falling edge
+[2019:3:20:9:27:36] Slope polarity change. Falling edge
+[2019:3:20:9:27:36] Appending first derivative column
+[2019:3:20:9:27:36] Slope polarity change. Falling edge
+[2019:3:20:9:27:36] Slope polarity change. Falling edge
+[2019:3:20:9:27:36] Slope polarity change. Falling edge
+[2019:3:20:9:27:36] Slope polarity change. Falling edge
+[2019:3:20:9:27:36] Slope polarity change. Falling edge
+[2019:3:20:9:27:36] Slope polarity change. Falling edge
+[2019:3:20:9:27:36] Slope polarity change. Falling edge
+[2019:3:20:9:27:36] Slope polarity change. Falling edge
+[2019:3:20:9:27:36] Slope polarity change. Falling edge
+[2019:3:20:9:27:36] Slope polarity change. Falling edge
+[2019:3:20:9:27:36] Appending first derivative column
+[2019:3:20:9:27:36] Slope polarity change. Falling edge
+[2019:3:20:9:27:36] Slope polarity change. Falling edge
+[2019:3:20:9:27:36] Slope polarity change. Falling edge
+[2019:3:20:9:27:36] Slope polarity change. Falling edge
+[2019:3:20:9:27:36] Slope polarity change. Falling edge
+[2019:3:20:9:27:36] Slope polarity change. Falling edge
+[2019:3:20:9:27:36] Slope polarity change. Falling edge
+[2019:3:20:9:27:36] Slope polarity change. Falling edge
+[2019:3:20:9:27:36] Slope polarity change. Falling edge
+[2019:3:20:9:27:36] Slope polarity change. Falling edge
+[2019:3:20:9:27:36] Slope polarity change. Falling edge
+[2019:3:20:9:27:36] Appending first derivative column
+[2019:3:20:9:27:36] Slope polarity change. Falling edge
+[2019:3:20:9:27:36] Slope polarity change. Falling edge
+[2019:3:20:9:27:36] Slope polarity change. Falling edge
+[2019:3:20:9:27:36] Slope polarity change. Falling edge
+[2019:3:20:9:27:36] Slope polarity change. Falling edge
+[2019:3:20:9:27:36] Appending first derivative column
+[2019:3:20:9:27:36] Slope polarity change. Falling edge
+[2019:3:20:9:27:36] Slope polarity change. Falling edge
+[2019:3:20:9:27:36] Slope polarity change. Falling edge
+[2019:3:20:9:27:36] Slope polarity change. Falling edge
+[2019:3:20:9:27:36] Slope polarity change. Falling edge
+[2019:3:20:9:27:36] Slope polarity change. Falling edge
+[2019:3:20:9:27:36] Slope polarity change. Falling edge
+[2019:3:20:9:27:36] Slope polarity change. Falling edge
+[2019:3:20:9:27:36] Appending first derivative column
+[2019:3:20:9:27:36] Slope polarity change. Falling edge
+[2019:3:20:9:27:36] Slope polarity change. Falling edge
+[2019:3:20:9:27:36] Slope polarity change. Falling edge
+[2019:3:20:9:27:36] Slope polarity change. Falling edge
+[2019:3:20:9:27:36] Appending first derivative column
+[2019:3:20:9:27:36] Slope polarity change. Falling edge
+[2019:3:20:9:27:36] Slope polarity change. Falling edge
+[2019:3:20:9:27:36] Slope polarity change. Falling edge
+[2019:3:20:9:27:36] Slope polarity change. Falling edge
+[2019:3:20:9:27:36] Slope polarity change. Falling edge
+[2019:3:20:9:27:36] Slope polarity change. Falling edge

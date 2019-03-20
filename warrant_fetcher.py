@@ -1,8 +1,32 @@
 import os
 import misc_functions as mf # Uses 0.2.5
 import csv
+import datetime as dt
 
 __version__ = "0.0.1"
+
+def gen_warrant_links(warrants):
+    '''This function takes a list of warrants and builds network links to those
+    warrants. the list of warrants must be integers'''
+    cur_year = str(dt.date.today().year)
+    
+    links = []
+    broken_links = []
+    for w in warrants:
+        if cur_year == str(w)[:4]:
+            #print("Warrant was this year")
+            path = '\\\\jsjcorp.com\\data\\GHSP\\GH\\webdata\\Testing\\' +str(w)
+##            path = 'Test warrants\\' +str(w)
+        else:
+            #print("Warrant was not this year")
+            path = '\\\\jsjcorp.com\\data\\GHSP\\GH\\webdata\\Testing\\' +str(w)[:4]+'\\'+str(w)
+##            path = 'Test warrants\\' +str(w)[:4]+'\\'+str(w)
+        if os.path.exists(path):
+            links.append(path)
+        else:
+            broken_links.append(path)
+
+    return(links, broken_links)
 
 def fetch_warrant_paths():
     rfile="warrants.csv"
@@ -13,9 +37,12 @@ def fetch_warrant_paths():
 
     warrants = []
     for row in RDR:
-        warrants.append(int(row[0]))
+        try:
+            warrants.append(int(row[0]))
+        except ValueError:
+            print("Header?")
 
-    good,bad = mf.gen_warrant_links(warrants)
+    good,bad = gen_warrant_links(warrants)
 
     paths = []
     print("{} Good links".format(mf.timestamp()),file=log)

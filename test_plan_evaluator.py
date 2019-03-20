@@ -1,5 +1,6 @@
 import pandas as pd
 import os
+import sys, traceback
 import datetime as dt
 import time
 import csv
@@ -141,9 +142,30 @@ while(True):
             print("{}. Ensure that a path is specified or warrants.csv is in the working directory.".format(err))
         
     elif main_sel == "Step detector":
-        file = "Specimen_RawData_1.csv"
-        df = pd.read_csv(file)
-        df = detect_step(df)
+        directory = "E:\\Work\GHSP\\HDrive\\WIP\\12401 - Ducato\\Issue #286 - PV testing\\Issue #286.1 Neutral-aft testing\\Session #2\\201900003\\Graphs-Data\\201900003 Forcible Override Test.is_ccyclic_RawData"
+        X='Extension (mm)'
+        Y='Primary load measurement (N)'
+        edge="Falling"
+        csv_files = []
+        for file in os.listdir(directory):
+            if file.endswith(".csv"):
+                csv_files.append(os.path.join(directory,file))
+        csvfile = open("Edges.csv",'a',newline='')
+        WRT = csv.writer(csvfile, dialect='excel')
+        WRT.writerow(["Sample",X,Y])
+        for i,f in enumerate(csv_files):
+            print(f)
+            try:    
+                edges = Detect_step.main(f,X,Y,edge)
+                for e in edges:
+                    row = (i+1,e[0],e[1])
+                    WRT.writerow(row)
+            except Exception as ex:
+                exc_type, exc_value, exc_traceback = sys.exc_info()
+                traceback.print_exception(exc_type, exc_value, exc_traceback,limit=2,file=sys.stdout)
+                time.sleep(15)
+            WRT.writerow([])
+        csvfile.close()
         
     elif main_sel == "Quit":
         break
