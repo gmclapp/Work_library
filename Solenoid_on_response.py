@@ -20,7 +20,7 @@ def dxdt(df, pos_col, time_col, noise_thres):
     filtered = round(change/noise_thres,0)*noise_thres
     df["Velocity [m/s]"] = filtered
     
-def response_time(tdms_file, directory, log):
+def response_time(tdms_file, directory, log, override):
     # The solenoid distance beyond which it is considered activated
     threshold = 4.5 #mm
     
@@ -152,7 +152,7 @@ def response_time(tdms_file, directory, log):
                         wspace=0.2,
                         hspace=0.4)
 
-    if bounce_flag or error_flag:
+    if bounce_flag or error_flag or override:
         suffix = 1
         filename = str(sample_number)+str(temp)+str(volt)+'.png'
         f_exists = os.path.isfile(filename)
@@ -186,11 +186,25 @@ def response_time(tdms_file, directory, log):
     WRT.writerow(newrow)
     csvfile.close()
     
-def main(directory=None):
+def main(directory=None, override=None):
     log = open("log.txt", mode='a')
     # Define the directory in which the test data are found
     if directory == None:
         directory = input("Enter directory\n>>>")
+
+    if override == None:
+        override = False
+        override_input = None
+        while True:
+            override_input = input("Default behavior graphs only bouncing or failed tests.\nGraph all tests? (Y/N)")
+            if override_input.upper() == 'Y':
+                override = True
+                break
+            elif override_input.upper() == 'N':
+                break
+            else:
+                pass
+        
     print(mf.timestamp(),directory,file=log)
     tdms_files = []
     csvfile = open('response times.csv','a',newline='')
@@ -208,7 +222,7 @@ def main(directory=None):
     for f in tdms_files:
         tdms_file = TdmsFile(f)
         try:
-            response_time(tdms_file, directory, log)
+            response_time(tdms_file, directory, log, override)
         except KeyError:
             print("{} Faulty tdms file {}.".format(mf.timestamp(),
                                                    str(f)),
