@@ -15,6 +15,7 @@ high_limit = float(input("Enter upper limit (deg)"))
 ambient = float(input("Enter the average measurement at ambient temperature (deg)"))
 hot = float(input("Enter the average measurement at hot temperature (deg)"))
 cold = float(input("Enter the average measurement at cold temperature (deg)"))
+ambient2 = float(input("Enter the average measurement once returned to ambient ambient temperature (deg)"))
 
 lower_x = min(low_limit,ambient,hot,cold)-0.5
 upper_x = max(high_limit,ambient,hot,cold)+1.35
@@ -41,6 +42,7 @@ axes.annotate(s=str(high_limit),xy=(high_limit,axis-(size+0.1)),horizontalalignm
 axes.plot(ambient,axis,marker='o',color='red')
 axes.plot(hot,axis,marker='o',color='red')
 axes.plot(cold,axis,marker='o',color='red')
+axes.plot(ambient2,axis,marker='o',color='red')
 
 # Hide tick labels
 axes.get_xaxis().set_ticks([])
@@ -50,9 +52,11 @@ axes.get_yaxis().set_ticks([])
 ambient_string = 'Ambient; ' + str(ambient)
 hot_string = 'Hot; ' + str(hot)
 cold_string = 'Cold; ' + str(cold)
+ambient2_string = 'Final ambient; ' + str(ambient2)
 
 axes.annotate(s=ambient_string,xy=(ambient,axis),xytext=(ambient+0.5,axis+1),arrowprops=dict(arrowstyle='->'))
 axes.annotate(s=hot_string,xy=(hot,axis),xytext=(hot+0.5,axis+1),arrowprops=dict(arrowstyle='->'))
 axes.annotate(s=cold_string,xy=(cold,axis),xytext=(cold+0.5,axis-1),arrowprops=dict(arrowstyle='->'))
+axes.annotate(s=ambient2_string,xy=(ambient2,axis),xytext=(ambient2+0.25,axis+1.5),arrowprops=dict(arrowstyle='->'))
 
 plt.show()
