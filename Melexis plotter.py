@@ -11,12 +11,12 @@ ax.set_ylabel("Y")
 
 # Define gear transitions
 P_over = 95
-P_to_R = 58
+P_to_R = 59
 R_to_N = 42
 N_to_D = 25
 
-D_to_N = 35
-N_to_R = 50
+D_to_N = 32
+N_to_R = 49
 R_to_P = 75
 D_over = 5
 
