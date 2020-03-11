@@ -65,6 +65,9 @@ ax.hlines(y_max,x_min,x_max,'red','dashed')
 ax.vlines(x_min,y_min,y_max,'red','dashed')
 ax.vlines(x_max,y_min,y_max,'red','dashed')
 
+ax.scatter(X[0],Y[0],c='r',marker='x') # Plot first point
+ax.scatter(X[-1],Y[-1],c='b',marker='x') # Plot last point
+
 plt.show()
 print(CAN_data.head())
 
