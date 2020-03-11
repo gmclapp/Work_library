@@ -3,7 +3,7 @@ import Tdms_file_converter as TFC
 import matplotlib.pyplot as plt
 
 pd.set_option('display.max_columns',None)
-DF_list = TFC.tdms_to_dfs(r'E:\Work\GHSP\HDrive\WIP\12504 - LD Police IP shifter\Issue #314 - Pursuit design validation testing\Issue #314.5 - DVPV-124 Sensor drift at 40 and -85C\202000435 - Pivot support test\202000435 Generic Loading.is_ccyclic_RawData\S0007167_Rearward Loading 222N_N_A_20200227131547.tdms')
+DF_list = TFC.tdms_to_dfs(r'E:\Work\GHSP\HDrive\WIP\12504 - LD Police IP shifter\Issue #314 - Pursuit design validation testing\Issue #314.5 - DVPV-124 Sensor drift at 40 and -85C\202000529 - Gate trace study\Test Data\202000529/S0007340_Setup 13 - Park_Park_20200310121955.tdms')
 
 fig, ax = plt.subplots(1,1,figsize=(6,6))
 ax.set_xlabel("X")
@@ -33,8 +33,17 @@ Y = list(filter(lambda a: a != 131.07,Y))
 
 
 ##CAN_data.plot(kind='scatter',x='X1',y='Y1',alpha=1)
+x_min = X[0]
+y_min = Y[0]
+x_max = X[0]
+y_max = Y[0]
 
 for i in range(len(X)):
+    x_min = min(x_min,float(X[i]))
+    x_max = max(x_max,float(X[i]))
+    y_min = min(y_min,float(Y[i]))
+    y_max = max(y_max,float(Y[i]))
+    
     ax.plot(X[i:i+2],Y[i:i+2],color='black')
     
 ##ax.plot(X,Y)
@@ -50,6 +59,11 @@ ax.hlines(D_over,35,65,'black','solid')
 
 ax.vlines(35,P_over,D_over,'black','solid')
 ax.vlines(65,P_over,D_over,'black','solid')
+
+ax.hlines(y_min,x_min,x_max,'red','dashed')
+ax.hlines(y_max,x_min,x_max,'red','dashed')
+ax.vlines(x_min,y_min,y_max,'red','dashed')
+ax.vlines(x_max,y_min,y_max,'red','dashed')
 
 plt.show()
 print(CAN_data.head())
