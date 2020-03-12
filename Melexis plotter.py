@@ -27,6 +27,42 @@ class GUI:
         
         master.config(menu=self.menubar)
 
+        # Add buttons
+        self.apply_button = tk.Button(frame,text="Apply",command=self.apply_cmd)
+        
+
+        self.next_button = tk.Button(frame,text=">",command=self.next_file_cmd)
+        
+        self.prev_button = tk.Button(frame,text="<",command=self.prev_file_cmd)  
+
+        self.open_button = tk.Button(frame,text="Open",command=self.open_cmd)
+        
+
+        self.save_button = tk.Button(frame,text="Save",command=self.save_cmd)
+        
+
+        self.path = tk.StringVar()
+        self.path_entry = tk.Entry(frame,textvariable=self.path)
+        
+        self.dir_button = tk.Button(frame,text="Dir",command=self.dir_cmd)
+        
+
+        self.current_file = tk.StringVar()
+        self.current_file_entry = tk.Entry(frame,textvariable=self.current_file)
+
+
+        self.current_file_entry.pack(side=tk.TOP)
+        self.dir_button.pack(side=tk.RIGHT)
+
+        self.prev_button.pack(side=tk.TOP)
+        self.path_entry.pack(side=tk.RIGHT)
+        self.next_button.pack(side=tk.RIGHT)
+        
+        self.apply_button.pack(side=tk.TOP)
+
+        self.open_button.pack(side=tk.TOP)
+        self.save_button.pack(side=tk.RIGHT)
+        
     def apply_cmd(self):
         pass
     def open_cmd(self):
@@ -37,6 +73,9 @@ class GUI:
         pass
     def prev_file_cmd(self):
         pass
+    def dir_cmd(self):
+        self.path.set(tk.filedialog.askdirectory())
+##        print(path)
 
 def melexsis_plotter(data):
     pd.set_option('display.max_columns',None)
