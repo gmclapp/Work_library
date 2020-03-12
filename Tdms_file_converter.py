@@ -37,7 +37,8 @@ def tdms_files_in_dir(file_path):
     tdms_files = []
     for file in os.listdir(file_path):
         if file.endswith(".tdms"):
-            tdms_files.append(os.path.join(file_path,file))
+##            tdms_files.append(os.path.join(file_path,file))
+            tdms_files.append(file)
 
     return(tdms_files)
 

@@ -1,14 +1,25 @@
 import pandas as pd
 import Tdms_file_converter as TFC
 import matplotlib.pyplot as plt
+from matplotlib.backends.backend_tkagg import FigureCanvasTkAgg, NavigationToolbar2TkAgg
+from matplotlib.figure import Figure
+import matplotlib
+matplotlib.use("TkAgg")
 import tkinter as tk
+import os
 
 
 class GUI:
     def __init__(self,master):
         frame = tk.Frame(master)
-        master.geometry("600x300") # Width x Height
+        #master.geometry("600x300") # Width x Height
         frame.pack()
+
+        # Build frames
+        self.dir_frame = tk.Frame(frame, border=3, relief=tk.RAISED)
+        self.file_frame = tk.Frame(frame, border=3, relief = tk.RAISED)
+        self.time_frame = tk.Frame(frame, border=3, relief = tk.RAISED)
+        self.plot_frame = tk.Frame(frame, border=3, relief = tk.RAISED)
 
         # Add menubar
         self.menubar = tk.Menu(master)
@@ -28,58 +39,85 @@ class GUI:
         master.config(menu=self.menubar)
 
         # Add buttons
-        self.apply_button = tk.Button(frame,text="Apply",command=self.apply_cmd)
+        self.apply_button = tk.Button(self.time_frame,text="Apply",command=self.apply_cmd)
         
 
-        self.next_button = tk.Button(frame,text=">",command=self.next_file_cmd)
+        self.next_button = tk.Button(self.file_frame,text=">",command=self.next_file_cmd)
         
-        self.prev_button = tk.Button(frame,text="<",command=self.prev_file_cmd)  
+        self.prev_button = tk.Button(self.file_frame,text="<",command=self.prev_file_cmd)  
 
-        self.open_button = tk.Button(frame,text="Open",command=self.open_cmd)
+        self.open_button = tk.Button(self.plot_frame,text="Open",command=self.open_cmd)
         
 
-        self.save_button = tk.Button(frame,text="Save",command=self.save_cmd)
+        self.save_button = tk.Button(self.plot_frame,text="Save",command=self.save_cmd)
         
 
         self.path = tk.StringVar()
-        self.path_entry = tk.Entry(frame,textvariable=self.path)
+        self.path_entry = tk.Entry(self.dir_frame,textvariable=self.path,width=200)
         
-        self.dir_button = tk.Button(frame,text="Dir",command=self.dir_cmd)
+        self.dir_button = tk.Button(self.dir_frame,text="Dir",command=self.dir_cmd)
         
 
         self.current_file = tk.StringVar()
-        self.current_file_entry = tk.Entry(frame,textvariable=self.current_file)
+        self.current_file_entry = tk.Entry(self.file_frame,textvariable=self.current_file,width=200)
 
 
-        self.current_file_entry.pack(side=tk.TOP)
+        # Build the GUI
+        self.dir_frame.pack()
+        self.file_frame.pack()
+        self.time_frame.pack()
+        self.plot_frame.pack()
+        
+        self.current_file_entry.pack(side=tk.LEFT)
         self.dir_button.pack(side=tk.RIGHT)
 
-        self.prev_button.pack(side=tk.TOP)
-        self.path_entry.pack(side=tk.RIGHT)
-        self.next_button.pack(side=tk.RIGHT)
+        self.prev_button.pack(side=tk.LEFT)
+        self.path_entry.pack(side=tk.LEFT)
+        self.next_button.pack(side=tk.LEFT)
         
         self.apply_button.pack(side=tk.TOP)
 
-        self.open_button.pack(side=tk.TOP)
-        self.save_button.pack(side=tk.RIGHT)
-        
+        self.open_button.pack(side=tk.LEFT)
+        self.save_button.pack(side=tk.LEFT)
+
     def apply_cmd(self):
-        pass
+        self.full_path = os.path.join(self.path.get(),self.current_file.get())
+        print(self.full_path)
     def open_cmd(self):
-        pass
+        data = {'transitions':{'P_over':95,
+                           'P_to_R':59,
+                           'R_to_N':42,
+                           'N_to_D':25,
+                           'D_to_N':32,
+                           'N_to_R':49,
+                           'R_to_P':75,
+                           'D_over':5,
+                           'x_upper':65,
+                           'x_lower':35},
+            'file':self.full_path
+            }
+        melexsis_plotter(data)
     def save_cmd(self):
         pass
     def next_file_cmd(self):
-        pass
+        if self.file_index < len(self.files):
+            self.file_index += 1
+            self.current_file.set(self.files[self.file_index])
     def prev_file_cmd(self):
-        pass
+        if self.file_index > 0:
+            self.file_index -= 1
+            self.current_file.set(self.files[self.file_index])
     def dir_cmd(self):
+        self.file_index = 0
         self.path.set(tk.filedialog.askdirectory())
+        self.files = TFC.tdms_files_in_dir(self.path.get())
+        self.current_file.set(self.files[self.file_index])
+        
 ##        print(path)
 
 def melexsis_plotter(data):
     pd.set_option('display.max_columns',None)
-    DF_list = TFC.tdms_to_dfs(data['files'][0])
+    DF_list = TFC.tdms_to_dfs(data['file'])
 
     fig, ax = plt.subplots(1,1,figsize=(6,6))
     ax.set_xlabel("X")
@@ -199,9 +237,9 @@ if __name__ == '__main__':
                            'x_lower':35},
             'files':files
             }
-    files = TFC.tdms_files_in_dir(r'E:\Work\GHSP\HDrive\WIP\12504 - LD Police IP shifter\Issue #314 - Pursuit design validation testing\Issue #314.5 - DVPV-124 Sensor drift at 40 and -85C\202000529 - Gate trace study\Test Data\202000529')
-    for f in files:
-        print(f)
+##    files = TFC.tdms_files_in_dir(r'E:\Work\GHSP\HDrive\WIP\12504 - LD Police IP shifter\Issue #314 - Pursuit design validation testing\Issue #314.5 - DVPV-124 Sensor drift at 40 and -85C\202000529 - Gate trace study\Test Data\202000529')
+##    for f in files:
+##        print(f)
         
     root = tk.Tk()
 
