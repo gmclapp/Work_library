@@ -105,7 +105,14 @@ class GUI:
                            'x_lower':35},
             'file':self.full_path
             }
-        self.melexsis_fig = melexsis_plotter(data)
+        self.canvas.figure.axes[0] = melexsis_plotter(data)
+        axis = self.canvas.figure.axes[0]
+        axis.set_xlim(25,75)
+        axis.set_ylim(0,110)
+
+        # Re plot here.
+        
+        self.canvas.draw()
     def open_cmd(self):
         data = {'transitions':{'P_over':95,
                            'P_to_R':59,
@@ -120,6 +127,7 @@ class GUI:
             'file':self.full_path
             }
         melexsis_plotter(data)
+        plt.show()
     def save_cmd(self):
         pass
     def next_file_cmd(self):
@@ -145,6 +153,8 @@ def melexsis_plotter(data):
     fig, ax = plt.subplots(1,1,figsize=(6,6))
     ax.set_xlabel("X")
     ax.set_ylabel("Y")
+    ax.set_xlim(25, 75)
+    ax.set_ylim(0,110)
 
     CAN_data = DF_list[1][1]
 
