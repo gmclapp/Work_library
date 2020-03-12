@@ -61,6 +61,15 @@ class GUI:
         self.current_file = tk.StringVar()
         self.current_file_entry = tk.Entry(self.file_frame,textvariable=self.current_file,width=200)
 
+        # Add plot preview
+        self.plot_fig = Figure(figsize=(6,6),dpi=100)
+        self.plot_fig.add_subplot(111).plot()
+##        self.canvas = FigureCanvasTkAgg(self.plot_fig,master=self.plot_frame)
+        self.melexsis_fig = self.plot_fig
+        self.canvas = FigureCanvasTkAgg(self.melexsis_fig,master=self.plot_frame)
+        self.canvas.draw()
+        self.toolbar = NavigationToolbar2TkAgg(self.canvas, self.plot_frame)
+        self.toolbar.update()
 
         # Build the GUI
         self.dir_frame.pack()
@@ -74,7 +83,8 @@ class GUI:
         self.prev_button.pack(side=tk.LEFT)
         self.path_entry.pack(side=tk.LEFT)
         self.next_button.pack(side=tk.LEFT)
-        
+
+        self.canvas.get_tk_widget().pack(side=tk.TOP)
         self.apply_button.pack(side=tk.TOP)
 
         self.open_button.pack(side=tk.LEFT)
@@ -83,6 +93,19 @@ class GUI:
     def apply_cmd(self):
         self.full_path = os.path.join(self.path.get(),self.current_file.get())
         print(self.full_path)
+        data = {'transitions':{'P_over':95,
+                           'P_to_R':59,
+                           'R_to_N':42,
+                           'N_to_D':25,
+                           'D_to_N':32,
+                           'N_to_R':49,
+                           'R_to_P':75,
+                           'D_over':5,
+                           'x_upper':65,
+                           'x_lower':35},
+            'file':self.full_path
+            }
+        self.melexsis_fig = melexsis_plotter(data)
     def open_cmd(self):
         data = {'transitions':{'P_over':95,
                            'P_to_R':59,
@@ -218,7 +241,8 @@ def melexsis_plotter(data):
     ax.scatter(X[0],Y[0],c='r',marker='x') # Plot first point
     ax.scatter(X[-1],Y[-1],c='b',marker='x') # Plot last point
 
-    plt.show()
+    return(fig)
+##    plt.show()
 ##    print(CAN_data.head())
 
 
