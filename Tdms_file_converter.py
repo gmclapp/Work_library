@@ -30,6 +30,17 @@ def dfs_to_excel(DF_list):
         for df in DF_list:
             df[1].to_excel(writer,df[0])
 
+def tdms_files_in_dir(file_path):
+    '''Takes a file path and returns a list of file names with the extension
+    *.tdms'''
+
+    tdms_files = []
+    for file in os.listdir(file_path):
+        if file.endswith(".tdms"):
+            tdms_files.append(os.path.join(file_path,file))
+
+    return(tdms_files)
+
 if __name__ == '__main__':
     DF_list = tdms_to_dfs(r'E:\Work\GHSP\HDrive\WIP\12504 - LD Police IP shifter\Issue #314 - Pursuit design validation testing\Issue #314.5 - DVPV-124 Sensor drift at 40 and -85C\202000435 - Pivot support test\202000435 Generic Loading.is_ccyclic_RawData\S0007167_Rearward Loading 222N_N_A_20200227131547.tdms')
     dfs_to_excel(DF_list)
