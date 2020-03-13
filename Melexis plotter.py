@@ -64,7 +64,9 @@ class GUI:
 
         # Add plot preview
         self.plot_fig, self.ax = plt.subplots(1,1,figsize=(6,6),dpi=100)
-
+        self.ax.set_xlim(25,75)
+        self.ax.set_ylim(0,110)
+        
         self.canvas = FigureCanvasTkAgg(self.plot_fig,master=self.plot_frame)
         self.canvas.draw()
         self.toolbar = NavigationToolbar2TkAgg(self.canvas, self.plot_frame)
