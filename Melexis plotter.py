@@ -6,6 +6,7 @@ from matplotlib.figure import Figure
 import matplotlib
 matplotlib.use("TkAgg")
 import tkinter as tk
+from tkinter import filedialog
 import os
 
 
@@ -62,11 +63,9 @@ class GUI:
         self.current_file_entry = tk.Entry(self.file_frame,textvariable=self.current_file,width=200)
 
         # Add plot preview
-        self.plot_fig = Figure(figsize=(6,6),dpi=100)
-        self.plot_fig.add_subplot(111).plot()
-##        self.canvas = FigureCanvasTkAgg(self.plot_fig,master=self.plot_frame)
-        self.melexsis_fig = self.plot_fig
-        self.canvas = FigureCanvasTkAgg(self.melexsis_fig,master=self.plot_frame)
+        self.plot_fig, self.ax = plt.subplots(1,1,figsize=(6,6),dpi=100)
+
+        self.canvas = FigureCanvasTkAgg(self.plot_fig,master=self.plot_frame)
         self.canvas.draw()
         self.toolbar = NavigationToolbar2TkAgg(self.canvas, self.plot_frame)
         self.toolbar.update()
@@ -105,7 +104,8 @@ class GUI:
                            'x_lower':35},
             'file':self.full_path
             }
-        self.canvas.figure.axes[0] = melexsis_plotter(data)
+        self.ax.clear()
+        self.canvas.figure.axes[0] = melexsis_plotter(self.ax, data)
         axis = self.canvas.figure.axes[0]
         axis.set_xlim(25,75)
         axis.set_ylim(0,110)
@@ -126,7 +126,7 @@ class GUI:
                            'x_lower':35},
             'file':self.full_path
             }
-        melexsis_plotter(data)
+        melexsis_plotter(self.ax, data)
         plt.show()
     def save_cmd(self):
         pass
@@ -140,17 +140,19 @@ class GUI:
             self.current_file.set(self.files[self.file_index])
     def dir_cmd(self):
         self.file_index = 0
-        self.path.set(tk.filedialog.askdirectory())
+        self.path.set(filedialog.askdirectory())
         self.files = TFC.tdms_files_in_dir(self.path.get())
         self.current_file.set(self.files[self.file_index])
         
 ##        print(path)
 
-def melexsis_plotter(data):
+def melexsis_plotter(ax, data):
+    '''takes a matplotlib axis and a data structure as arguments. Plots melexis data to that axis using data
+    from the structure.'''
     pd.set_option('display.max_columns',None)
     DF_list = TFC.tdms_to_dfs(data['file'])
 
-    fig, ax = plt.subplots(1,1,figsize=(6,6))
+##    fig, ax = plt.subplots(1,1,figsize=(6,6))
     ax.set_xlabel("X")
     ax.set_ylabel("Y")
     ax.set_xlim(25, 75)
@@ -251,26 +253,25 @@ def melexsis_plotter(data):
     ax.scatter(X[0],Y[0],c='r',marker='x') # Plot first point
     ax.scatter(X[-1],Y[-1],c='b',marker='x') # Plot last point
 
-    return(fig)
 ##    plt.show()
 ##    print(CAN_data.head())
 
 
 
 if __name__ == '__main__':
-    files = TFC.tdms_files_in_dir(r'E:\Work\GHSP\HDrive\WIP\12504 - LD Police IP shifter\Issue #314 - Pursuit design validation testing\Issue #314.5 - DVPV-124 Sensor drift at 40 and -85C\202000529 - Gate trace study\Test Data\202000529')
-    data = {'transitions':{'P_over':95,
-                           'P_to_R':59,
-                           'R_to_N':42,
-                           'N_to_D':25,
-                           'D_to_N':32,
-                           'N_to_R':49,
-                           'R_to_P':75,
-                           'D_over':5,
-                           'x_upper':65,
-                           'x_lower':35},
-            'files':files
-            }
+##    files = TFC.tdms_files_in_dir(r'E:\Work\GHSP\HDrive\WIP\12504 - LD Police IP shifter\Issue #314 - Pursuit design validation testing\Issue #314.5 - DVPV-124 Sensor drift at 40 and -85C\202000529 - Gate trace study\Test Data\202000529')
+##    data = {'transitions':{'P_over':95,
+##                           'P_to_R':59,
+##                           'R_to_N':42,
+##                           'N_to_D':25,
+##                           'D_to_N':32,
+##                           'N_to_R':49,
+##                           'R_to_P':75,
+##                           'D_over':5,
+##                           'x_upper':65,
+##                           'x_lower':35},
+##            'files':files
+##            }
 ##    files = TFC.tdms_files_in_dir(r'E:\Work\GHSP\HDrive\WIP\12504 - LD Police IP shifter\Issue #314 - Pursuit design validation testing\Issue #314.5 - DVPV-124 Sensor drift at 40 and -85C\202000529 - Gate trace study\Test Data\202000529')
 ##    for f in files:
 ##        print(f)
@@ -281,4 +282,4 @@ if __name__ == '__main__':
     root.mainloop()
     root.destroy()
     
-    melexsis_plotter(data)
+##    melexsis_plotter(data)
