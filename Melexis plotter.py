@@ -4,6 +4,7 @@ import matplotlib.pyplot as plt
 from matplotlib.backends.backend_tkagg import FigureCanvasTkAgg, NavigationToolbar2TkAgg
 from matplotlib.figure import Figure
 import matplotlib
+from matplotlib.lines import Line2D
 matplotlib.use("TkAgg")
 import tkinter as tk
 from tkinter import filedialog
@@ -63,7 +64,7 @@ class GUI:
         self.current_file_entry = tk.Entry(self.file_frame,textvariable=self.current_file,width=200)
 
         # Add plot preview
-        self.plot_fig, self.ax = plt.subplots(1,1,figsize=(6,6),dpi=100)
+        self.plot_fig, self.ax = plt.subplots(1,1,figsize=(10,6),dpi=100)
         self.ax.set_xlim(25,75)
         self.ax.set_ylim(0,110)
         
@@ -85,7 +86,7 @@ class GUI:
         self.path_entry.pack(side=tk.LEFT)
         self.next_button.pack(side=tk.LEFT)
 
-        self.canvas.get_tk_widget().pack(side=tk.TOP)
+        self.canvas.get_tk_widget().pack(side=tk.TOP,fill=tk.BOTH,expand=True)
         self.apply_button.pack(side=tk.TOP)
 
         self.open_button.pack(side=tk.LEFT)
@@ -111,8 +112,6 @@ class GUI:
         axis = self.canvas.figure.axes[0]
         axis.set_xlim(25,75)
         axis.set_ylim(0,110)
-
-        # Re plot here.
         
         self.canvas.draw()
     def open_cmd(self):
@@ -145,8 +144,6 @@ class GUI:
         self.path.set(filedialog.askdirectory())
         self.files = TFC.tdms_files_in_dir(self.path.get())
         self.current_file.set(self.files[self.file_index])
-        
-##        print(path)
 
 def melexsis_plotter(ax, data):
     '''takes a matplotlib axis and a data structure as arguments. Plots melexis data to that axis using data
@@ -154,7 +151,6 @@ def melexsis_plotter(ax, data):
     pd.set_option('display.max_columns',None)
     DF_list = TFC.tdms_to_dfs(data['file'])
 
-##    fig, ax = plt.subplots(1,1,figsize=(6,6))
     ax.set_xlabel("X")
     ax.set_ylabel("Y")
     ax.set_xlim(25, 75)
@@ -164,6 +160,7 @@ def melexsis_plotter(ax, data):
 
     X = CAN_data['X_AVG'].tolist()
     Y = CAN_data['Y_AVG'].tolist()
+    GEAR = CAN_data['Reported Gear']
 
     X = list(filter(lambda a: a != 0,X))
     X = list(filter(lambda a: a != 131.07,X))
@@ -183,10 +180,20 @@ def melexsis_plotter(ax, data):
         x_max = max(x_max,float(X[i]))
         y_min = min(y_min,float(Y[i]))
         y_max = max(y_max,float(Y[i]))
+
+        plot_color = 'green'
+        if GEAR[i] == 'Park':
+            plot_color = 'green'
+        elif GEAR[i] == 'Reverse':
+            plot_color = 'blue'
+        elif GEAR[i] == 'Neutral':
+            plot_color = 'yellow'
+        elif GEAR[i] == 'Drive':
+            plot_color = 'purple'
+        else:
+            plot_color = 'red'
+        ax.plot(X[i:i+2],Y[i:i+2],color=plot_color)
         
-        ax.plot(X[i:i+2],Y[i:i+2],color='black')
-        
-    ##ax.plot(X,Y)
     ax.hlines(data['transitions']['P_over'],
               data['transitions']['x_lower'],
               data['transitions']['x_upper'],
@@ -255,33 +262,19 @@ def melexsis_plotter(ax, data):
     ax.scatter(X[0],Y[0],c='r',marker='x') # Plot first point
     ax.scatter(X[-1],Y[-1],c='b',marker='x') # Plot last point
 
-##    plt.show()
-##    print(CAN_data.head())
-
-
+    custom_legend = [Line2D([0],[0],color='green'),
+                     Line2D([0],[0],color='blue'),
+                     Line2D([0],[0],color='yellow'),
+                     Line2D([0],[0],color='purple'),
+                     Line2D([0],[0],color='red')]
+    
+    ax.legend(custom_legend,['Park','Reverse','Neutral','Drive','Error'],
+              title='Reported gear')
 
 if __name__ == '__main__':
-##    files = TFC.tdms_files_in_dir(r'E:\Work\GHSP\HDrive\WIP\12504 - LD Police IP shifter\Issue #314 - Pursuit design validation testing\Issue #314.5 - DVPV-124 Sensor drift at 40 and -85C\202000529 - Gate trace study\Test Data\202000529')
-##    data = {'transitions':{'P_over':95,
-##                           'P_to_R':59,
-##                           'R_to_N':42,
-##                           'N_to_D':25,
-##                           'D_to_N':32,
-##                           'N_to_R':49,
-##                           'R_to_P':75,
-##                           'D_over':5,
-##                           'x_upper':65,
-##                           'x_lower':35},
-##            'files':files
-##            }
-##    files = TFC.tdms_files_in_dir(r'E:\Work\GHSP\HDrive\WIP\12504 - LD Police IP shifter\Issue #314 - Pursuit design validation testing\Issue #314.5 - DVPV-124 Sensor drift at 40 and -85C\202000529 - Gate trace study\Test Data\202000529')
-##    for f in files:
-##        print(f)
         
     root = tk.Tk()
 
     app = GUI(root)
     root.mainloop()
     root.destroy()
-    
-##    melexsis_plotter(data)
