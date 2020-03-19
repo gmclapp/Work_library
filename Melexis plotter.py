@@ -10,7 +10,16 @@ import tkinter as tk
 from tkinter import filedialog
 import os
 
-
+class plot_file:
+    def __init__(self):
+        self.path = tk.StringVar()
+        self.file = tk.StringVar()
+        
+    def set_path(self,path):
+        pass
+    def set_file(self, file):
+        pass
+    
 class GUI:
     def __init__(self,master):
         frame = tk.Frame(master)
@@ -56,9 +65,13 @@ class GUI:
         
         self.dir_button = tk.Button(self.dir_frame,text="Dir",command=self.dir_cmd)
         
-
         self.current_file = tk.StringVar()
         self.current_file_entry = tk.Entry(self.file_frame,textvariable=self.current_file,width=200)
+
+        self.pathB = tk.StringVar()
+        self.path_entryB = tk.Entry(self.dir_frame,textvariable=self.pathB,width=200)
+
+        self.dir_buttonB = tk.Button(self.dir_frame,text='Dir',command=self.dir_cmd)
 
         # Add plot preview
         self.plot_fig, self.ax = plt.subplots(1,1,figsize=(10,6),dpi=100)
@@ -136,11 +149,13 @@ class GUI:
         if self.file_index > 0:
             self.file_index -= 1
             self.current_file.set(self.files[self.file_index])
-    def dir_cmd(self):
+            
+    def dir_cmd(self, path_var, file_list):
         self.file_index = 0
-        self.path.set(filedialog.askdirectory())
-        self.files = TFC.tdms_files_in_dir(self.path.get())
-        self.current_file.set(self.files[self.file_index])
+        path_var.set(filedialog.askdirectory())
+        
+        file_list = TFC.tdms_files_in_dir(self.path.get())
+        #self.current_file.set(self.files[self.file_index])
 
 def melexsis_plotter(ax, data):
     '''takes a matplotlib axis and a data structure as arguments. Plots melexis data to that axis using data
