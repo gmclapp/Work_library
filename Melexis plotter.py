@@ -28,8 +28,8 @@ class GUI:
         frame.pack()
 
         # Build frames
-        self.dir_frame = tk.Frame(frame, border=3, relief=tk.RAISED)
-        self.file_frame = tk.Frame(frame, border=3, relief = tk.RAISED)
+        self.dir_frame = tk.Frame(frame, border=3, relief=tk.RAISED,bg='blue')
+        self.file_frame = tk.Frame(frame, border=3, relief = tk.RAISED,bg='red')
         self.time_frame = tk.Frame(frame, border=3, relief = tk.RAISED)
         self.plot_frame = tk.Frame(frame, border=3, relief = tk.RAISED)
 
@@ -68,18 +68,18 @@ class GUI:
         # Add text entry fields and askdirectory buttons
         self.PlotA = plot_file()
 
-        self.path_entry = tk.Entry(self.dir_frame,textvariable=self.PlotA.path,width=200)
+        self.path_entry = tk.Entry(self.dir_frame,textvariable=self.PlotA.path,width=100)
         
         self.dir_button = tk.Button(self.dir_frame,text="Dir",command=self.dir_cmd)
         
-        self.current_file_entry = tk.Entry(self.file_frame,textvariable=self.PlotA.file,width=200)
+        self.current_file_entry = tk.Entry(self.file_frame,textvariable=self.PlotA.file,width=100)
 
         self.PlotB = plot_file()
-        self.path_entryB = tk.Entry(self.dir_frame,textvariable=self.PlotB.path,width=200)
+        self.path_entryB = tk.Entry(self.dir_frame,textvariable=self.PlotB.path,width=100)
 
         self.dir_buttonB = tk.Button(self.dir_frame,text='Dir',command=self.dir_cmd)
 
-        self.current_file_entryB = tk.Entry(self.file_frame,textvariable=self.PlotB.file,width=200)
+        self.current_file_entryB = tk.Entry(self.file_frame,textvariable=self.PlotB.file,width=100)
 
         # Add plot preview
         self.plot_fig, self.ax = plt.subplots(1,1,figsize=(10,6),dpi=100)
