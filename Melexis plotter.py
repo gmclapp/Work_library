@@ -16,9 +16,10 @@ class plot_file:
         self.file = tk.StringVar()
         
     def set_path(self,path):
-        pass
+        self.path.set(path)
+        
     def set_file(self, file):
-        pass
+        self.file.set(file)
     
 class GUI:
     def __init__(self,master):
@@ -60,18 +61,20 @@ class GUI:
         self.open_button = tk.Button(self.plot_frame,text="Open",command=self.open_cmd)
         
         # Add text entry fields and askdirectory buttons
-        self.path = tk.StringVar()
-        self.path_entry = tk.Entry(self.dir_frame,textvariable=self.path,width=200)
+        self.PlotA = plot_file()
+
+        self.path_entry = tk.Entry(self.dir_frame,textvariable=self.PlotA.path,width=200)
         
         self.dir_button = tk.Button(self.dir_frame,text="Dir",command=self.dir_cmd)
         
-        self.current_file = tk.StringVar()
-        self.current_file_entry = tk.Entry(self.file_frame,textvariable=self.current_file,width=200)
+        self.current_file_entry = tk.Entry(self.file_frame,textvariable=self.PlotA.file,width=200)
 
-        self.pathB = tk.StringVar()
-        self.path_entryB = tk.Entry(self.dir_frame,textvariable=self.pathB,width=200)
+        self.PlotB = plot_file()
+        self.path_entryB = tk.Entry(self.dir_frame,textvariable=self.PlotB.path,width=200)
 
         self.dir_buttonB = tk.Button(self.dir_frame,text='Dir',command=self.dir_cmd)
+
+        self.current_file_entryB = tk.Entry(self.file_frame,textvariable=self.PlotB.file,width=200)
 
         # Add plot preview
         self.plot_fig, self.ax = plt.subplots(1,1,figsize=(10,6),dpi=100)
@@ -91,6 +94,8 @@ class GUI:
         
         self.current_file_entry.pack(side=tk.LEFT)
         self.dir_button.pack(side=tk.RIGHT)
+        self.current_file_entryB.pack(side=tk.BOTTOM)
+        self.dir_buttonB.pack(side=tk.RIGHT)
 
         self.prev_button.pack(side=tk.LEFT)
         self.path_entry.pack(side=tk.LEFT)
