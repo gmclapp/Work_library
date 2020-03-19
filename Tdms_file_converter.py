@@ -21,12 +21,12 @@ def tdms_to_dfs(file_path):
     
     return(DF_list)
 
-def dfs_to_excel(DF_list):
+def dfs_to_excel(DF_list, out_file_name):
     '''Accepts a list of tuples where the first element is a sheet name and the
     second is a pandas data frame, and outputs an excel file where each
     dataframe is made a tab in the excel file with the name given.'''
     
-    with pd.ExcelWriter('output.xlsx') as writer:
+    with pd.ExcelWriter(out_file_name+'.xlsx') as writer:
         for df in DF_list:
             df[1].to_excel(writer,df[0])
 
@@ -43,5 +43,12 @@ def tdms_files_in_dir(file_path):
     return(tdms_files)
 
 if __name__ == '__main__':
-    DF_list = tdms_to_dfs(r'E:\Work\GHSP\HDrive\WIP\12504 - LD Police IP shifter\Issue #314 - Pursuit design validation testing\Issue #314.5 - DVPV-124 Sensor drift at 40 and -85C\202000435 - Pivot support test\202000435 Generic Loading.is_ccyclic_RawData\S0007167_Rearward Loading 222N_N_A_20200227131547.tdms')
-    dfs_to_excel(DF_list)
+    working_dir = r'E:\Work\GHSP\HDrive\WIP\12504 - LD Pursuit\Issue #314 - Pursuit DV\Warrant 202000553 - Instron effort testing'
+    file_list = tdms_files_in_dir(working_dir)
+    for f in file_list:
+        DF_list = tdms_to_dfs(os.path.join(working_dir,f))
+        print(f[:-5])
+        dfs_to_excel(DF_list, f[:-5])
+                      
+##    DF_list = tdms_to_dfs(r'E:\Work\GHSP\HDrive\WIP\12504 - LD Police IP shifter\Issue #314 - Pursuit design validation testing\Issue #314.5 - DVPV-124 Sensor drift at 40 and -85C\202000435 - Pivot support test\202000435 Generic Loading.is_ccyclic_RawData\S0007167_Rearward Loading 222N_N_A_20200227131547.tdms')
+##    dfs_to_excel(DF_list)
