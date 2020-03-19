@@ -58,6 +58,11 @@ class GUI:
         
         self.prev_button = tk.Button(self.file_frame,text="<",command=self.prev_file_cmd)  
 
+        ##--- These need to be altered so that the command function can be used by both entry boxes ---##
+        self.next_buttonB = tk.Button(self.file_frame,text=">",command=self.next_file_cmd)
+        
+        self.prev_buttonB = tk.Button(self.file_frame,text="<",command=self.prev_file_cmd)
+        
         self.open_button = tk.Button(self.plot_frame,text="Open",command=self.open_cmd)
         
         # Add text entry fields and askdirectory buttons
@@ -92,14 +97,19 @@ class GUI:
         self.time_frame.pack()
         self.plot_frame.pack()
         
-        self.current_file_entry.pack(side=tk.LEFT)
-        self.dir_button.pack(side=tk.RIGHT)
-        self.current_file_entryB.pack(side=tk.BOTTOM)
-        self.dir_buttonB.pack(side=tk.RIGHT)
+        self.current_file_entry.grid(row=1,column=0)
+        self.dir_button.grid(row=1,column=1)
+        self.current_file_entryB.grid(row=3,column=0)
+        self.dir_buttonB.grid(row=3,column=1)
 
-        self.prev_button.pack(side=tk.LEFT)
-        self.path_entry.pack(side=tk.LEFT)
-        self.next_button.pack(side=tk.LEFT)
+        
+        self.path_entry.grid(row=0,column=0)
+        self.prev_button.grid(row=0,column=1)
+        self.next_button.grid(row=0,column=2)
+
+        self.path_entryB.grid(row=2,column=0)
+        self.prev_buttonB.grid(row=2,column=1)
+        self.next_buttonB.grid(row=2,column=2)
 
         self.canvas.get_tk_widget().pack(side=tk.TOP,fill=tk.BOTH,expand=True)
         self.apply_button.pack(side=tk.TOP)
