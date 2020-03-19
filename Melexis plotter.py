@@ -50,10 +50,7 @@ class GUI:
 
         self.open_button = tk.Button(self.plot_frame,text="Open",command=self.open_cmd)
         
-
-        self.save_button = tk.Button(self.plot_frame,text="Save",command=self.save_cmd)
-        
-
+        # Add text entry fields and askdirectory buttons
         self.path = tk.StringVar()
         self.path_entry = tk.Entry(self.dir_frame,textvariable=self.path,width=200)
         
@@ -90,7 +87,6 @@ class GUI:
         self.apply_button.pack(side=tk.TOP)
 
         self.open_button.pack(side=tk.LEFT)
-        self.save_button.pack(side=tk.LEFT)
 
     def apply_cmd(self):
         self.full_path = os.path.join(self.path.get(),self.current_file.get())
@@ -107,6 +103,8 @@ class GUI:
                            'x_lower':35},
             'file':self.full_path
             }
+        
+        # re-plot the preview window
         self.ax.clear()
         self.canvas.figure.axes[0] = melexsis_plotter(self.ax, data)
         axis = self.canvas.figure.axes[0]
@@ -129,8 +127,7 @@ class GUI:
             }
         melexsis_plotter(self.ax, data)
         plt.show()
-    def save_cmd(self):
-        pass
+        
     def next_file_cmd(self):
         if self.file_index < len(self.files):
             self.file_index += 1
