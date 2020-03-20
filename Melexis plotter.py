@@ -10,6 +10,27 @@ import tkinter as tk
 from tkinter import filedialog
 import os
 
+class plot_file:
+    def __init__(self):
+        self.path = tk.StringVar()
+        self.file = tk.StringVar()
+        self.file_index = 0
+        self.file_list = []
+
+    def next_file_cmd(self):
+        if self.file_index < len(self.file_list):
+            self.file_index += 1
+            self.file.set(self.file_list[self.file_index])
+    def prev_file_cmd(self):
+        if self.file_index > 0:
+            self.file_index -= 1
+            self.file.set(self.file_list[self.file_index])
+            
+    def dir_cmd(self):
+        self.file_index = 0
+        self.path.set(filedialog.askdirectory())
+        
+        self.file_list = TFC.tdms_files_in_dir(self.path.get())
 
 class GUI:
     def __init__(self,master):
@@ -18,8 +39,8 @@ class GUI:
         frame.pack()
 
         # Build frames
-        self.dir_frame = tk.Frame(frame, border=3, relief=tk.RAISED)
-        self.file_frame = tk.Frame(frame, border=3, relief = tk.RAISED)
+        self.dir_frame = tk.Frame(frame, border=3, relief=tk.RAISED,bg='blue')
+        self.file_frame = tk.Frame(frame, border=3, relief = tk.RAISED,bg='red')
         self.time_frame = tk.Frame(frame, border=3, relief = tk.RAISED)
         self.plot_frame = tk.Frame(frame, border=3, relief = tk.RAISED)
 
@@ -40,25 +61,39 @@ class GUI:
         
         master.config(menu=self.menubar)
 
+        # Add plot objects
+        self.PlotA = plot_file()
+        self.PlotB = plot_file()
+        
         # Add buttons
         self.apply_button = tk.Button(self.time_frame,text="Apply",command=self.apply_cmd)
         
 
-        self.next_button = tk.Button(self.file_frame,text=">",command=self.next_file_cmd)
+        self.next_button = tk.Button(self.file_frame,text=">",command=self.PlotA.next_file_cmd)
         
-        self.prev_button = tk.Button(self.file_frame,text="<",command=self.prev_file_cmd)  
+        self.prev_button = tk.Button(self.file_frame,text="<",command=self.PlotA.prev_file_cmd)  
 
+        ##--- These need to be altered so that the command function can be used by both entry boxes ---##
+        self.next_buttonB = tk.Button(self.file_frame,text=">",command=self.PlotB.next_file_cmd)
+        
+        self.prev_buttonB = tk.Button(self.file_frame,text="<",command=self.PlotB.prev_file_cmd)
+        
         self.open_button = tk.Button(self.plot_frame,text="Open",command=self.open_cmd)
         
         # Add text entry fields and askdirectory buttons
-        self.path = tk.StringVar()
-        self.path_entry = tk.Entry(self.dir_frame,textvariable=self.path,width=200)
-        
-        self.dir_button = tk.Button(self.dir_frame,text="Dir",command=self.dir_cmd)
         
 
-        self.current_file = tk.StringVar()
-        self.current_file_entry = tk.Entry(self.file_frame,textvariable=self.current_file,width=200)
+        self.path_entry = tk.Entry(self.dir_frame,textvariable=self.PlotA.path,width=100)
+        
+        self.dir_button = tk.Button(self.dir_frame,text="Dir",command=self.PlotA.dir_cmd)
+        
+        self.current_file_entry = tk.Entry(self.file_frame,textvariable=self.PlotA.file,width=100)
+
+        self.path_entryB = tk.Entry(self.dir_frame,textvariable=self.PlotB.path,width=100)
+
+        self.dir_buttonB = tk.Button(self.dir_frame,text='Dir',command=self.PlotB.dir_cmd)
+
+        self.current_file_entryB = tk.Entry(self.file_frame,textvariable=self.PlotB.file,width=100)
 
         # Add plot preview
         self.plot_fig, self.ax = plt.subplots(1,1,figsize=(10,6),dpi=100)
@@ -76,12 +111,19 @@ class GUI:
         self.time_frame.pack()
         self.plot_frame.pack()
         
-        self.current_file_entry.pack(side=tk.LEFT)
-        self.dir_button.pack(side=tk.RIGHT)
+        self.current_file_entry.grid(row=1,column=0)
+        self.dir_button.grid(row=1,column=1)
+        self.current_file_entryB.grid(row=3,column=0)
+        self.dir_buttonB.grid(row=3,column=1)
 
-        self.prev_button.pack(side=tk.LEFT)
-        self.path_entry.pack(side=tk.LEFT)
-        self.next_button.pack(side=tk.LEFT)
+        
+        self.path_entry.grid(row=0,column=0)
+        self.prev_button.grid(row=0,column=1)
+        self.next_button.grid(row=0,column=2)
+
+        self.path_entryB.grid(row=2,column=0)
+        self.prev_buttonB.grid(row=2,column=1)
+        self.next_buttonB.grid(row=2,column=2)
 
         self.canvas.get_tk_widget().pack(side=tk.TOP,fill=tk.BOTH,expand=True)
         self.apply_button.pack(side=tk.TOP)
@@ -89,8 +131,11 @@ class GUI:
         self.open_button.pack(side=tk.LEFT)
 
     def apply_cmd(self):
-        self.full_path = os.path.join(self.path.get(),self.current_file.get())
-        print(self.full_path)
+        self.full_pathA = os.path.join(self.PlotA.path.get(),self.PlotA.file.get())
+        self.full_pathB = os.path.join(self.PlotB.path.get(),self.PlotB.file.get())
+        
+##        self.full_path = os.path.join(self.path.get(),self.current_file.get())
+##        print(self.full_path)
         data = {'transitions':{'P_over':95,
                            'P_to_R':59,
                            'R_to_N':42,
@@ -101,12 +146,25 @@ class GUI:
                            'D_over':5,
                            'x_upper':65,
                            'x_lower':35},
-            'file':self.full_path
+            'file':self.full_pathA
             }
-        
+        dataB = {'transitions':{'P_over':95,
+                           'P_to_R':59,
+                           'R_to_N':42,
+                           'N_to_D':25,
+                           'D_to_N':32,
+                           'N_to_R':49,
+                           'R_to_P':75,
+                           'D_over':5,
+                           'x_upper':65,
+                           'x_lower':35},
+            'file':self.full_pathB
+            }
         # re-plot the preview window
         self.ax.clear()
         self.canvas.figure.axes[0] = melexsis_plotter(self.ax, data)
+        self.canvas.figure.axes[0] = melexsis_plotter(self.ax, dataB)
+        
         axis = self.canvas.figure.axes[0]
         axis.set_xlim(25,75)
         axis.set_ylim(0,110)
@@ -127,20 +185,6 @@ class GUI:
             }
         melexsis_plotter(self.ax, data)
         plt.show()
-        
-    def next_file_cmd(self):
-        if self.file_index < len(self.files):
-            self.file_index += 1
-            self.current_file.set(self.files[self.file_index])
-    def prev_file_cmd(self):
-        if self.file_index > 0:
-            self.file_index -= 1
-            self.current_file.set(self.files[self.file_index])
-    def dir_cmd(self):
-        self.file_index = 0
-        self.path.set(filedialog.askdirectory())
-        self.files = TFC.tdms_files_in_dir(self.path.get())
-        self.current_file.set(self.files[self.file_index])
 
 def melexsis_plotter(ax, data):
     '''takes a matplotlib axis and a data structure as arguments. Plots melexis data to that axis using data
