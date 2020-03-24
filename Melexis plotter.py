@@ -163,7 +163,7 @@ class GUI:
         # re-plot the preview window
         self.ax.clear()
         self.canvas.figure.axes[0] = melexsis_plotter(self.ax, data)
-        self.canvas.figure.axes[0] = melexsis_plotter(self.ax, dataB)
+        self.canvas.figure.axes[0] = melexsis_plotter(self.ax, dataB,faded=True)
         
         axis = self.canvas.figure.axes[0]
         axis.set_xlim(25,75)
@@ -186,7 +186,7 @@ class GUI:
         melexsis_plotter(self.ax, data)
         plt.show()
 
-def melexsis_plotter(ax, data):
+def melexsis_plotter(ax, data,faded=False):
     '''takes a matplotlib axis and a data structure as arguments. Plots melexis data to that axis using data
     from the structure.'''
     pd.set_option('display.max_columns',None)
@@ -233,7 +233,18 @@ def melexsis_plotter(ax, data):
             plot_color = 'purple'
         else:
             plot_color = 'red'
-        ax.plot(X[i:i+2],Y[i:i+2],color=plot_color)
+        if faded:
+            custom_alpha = 0.5
+            custom_style = ':'
+        else:
+            custom_alpha = 1
+            custom_style = '-'
+        ax.plot(X[i:i+2],
+                Y[i:i+2],
+                color=plot_color,
+                linestyle=custom_style,
+                alpha=custom_alpha)
+        
         
     ax.hlines(data['transitions']['P_over'],
               data['transitions']['x_lower'],
