@@ -59,10 +59,7 @@ class plot_file:
             X_end = X_data[-1]
             X_min = min(X_data)
             X_max = max(X_data)
-##            print("Min X: {}\nMax X: {}\nStart X: {}\nEnd X: {}".format(X_min,
-##                                                                X_max,
-##                                                                X_start,
-##                                                                X_end))
+                                                             X_end))
         else:
             print("{} Does not have any data!".format(sample))
 
@@ -76,10 +73,7 @@ class plot_file:
             Y_end = Y_data[-1]
             Y_min = min(Y_data)
             Y_max = max(Y_data)
-##            print("Min Y: {}\nMax Y: {}\nStart Y: {}\nEnd Y: {}".format(Y_min,
-##                                                                Y_max,
-##                                                                Y_start,
-##                                                                Y_end))
+                                                             Y_end))
         else:
             print("{} Does not have any data!".format(sample))
         
@@ -100,14 +94,6 @@ class plot_file:
         NtoR = Neutral.tolist()[-1]
         RtoP = Reverse.tolist()[-1]
         
-##        print("Park to Reverse: {}".format(PtoR))
-##        print("Reverse to Neutral: {}".format(RtoN))
-##        print("Neutral to Drive: {}".format(NtoD))
-##
-##        print("Drive to Neutral: {}".format(DtoN))
-##        print("Neutral to Reverse: {}".format(NtoR))
-##        print("Reverse to Park: {}".format(RtoP))
-
         try:
             self.output.append([f,warrant,sample,X_start,Y_start,
                            X_end,Y_end,X_min,X_max,Y_min,Y_max,
