@@ -44,7 +44,8 @@ class plot_file:
         curr_fileDFS = TFC.tdms_to_dfs(full)
         metaDF = curr_fileDFS[0][1]
         DataDF = curr_fileDFS[1][1]
-        
+
+        print(DataDF.head())
         warrant = metaDF.loc[metaDF.Name == "Warrant Number","Value"].values[0]
         sample = metaDF.loc[metaDF.Name == "Sample Number","Value"].values[0]
 ##        print("Warrant: {}\nSample:{}".format(warrant,sample))
@@ -59,7 +60,7 @@ class plot_file:
             X_end = X_data[-1]
             X_min = min(X_data)
             X_max = max(X_data)
-                                                             X_end))
+                                                      
         else:
             print("{} Does not have any data!".format(sample))
 
@@ -73,7 +74,7 @@ class plot_file:
             Y_end = Y_data[-1]
             Y_min = min(Y_data)
             Y_max = max(Y_data)
-                                                             Y_end))
+
         else:
             print("{} Does not have any data!".format(sample))
         
@@ -93,6 +94,12 @@ class plot_file:
         DtoN = Drive.tolist()[-1]
         NtoR = Neutral.tolist()[-1]
         RtoP = Reverse.tolist()[-1]
+
+        # Process load data
+        Positive_loads = DataDF.loc[DataDF["Load [N]"]>=0,"Extension [mm]"]
+
+        First_zero = Positive_loads.tolist()[0]
+        print("First zero crossing: {}mm".format(First_zero))
         
         try:
             self.output.append([f,warrant,sample,X_start,Y_start,
