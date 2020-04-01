@@ -13,7 +13,7 @@ class plot_file:
         self.file_list = []
         self.output = [["Filename","Warrant","Sample","Starting X","Starting Y",
                   "Ending X","Ending Y","Min X","Max X","Min Y","Max Y",
-                   "P to R","R to N","N to D","D to N","N to R","R to P"]]
+                   "P to R","R to N","N to D","D to N","N to R","R to P","First zero"]]
 
     def next_file_cmd(self):
         if self.file_index < len(self.file_list):
@@ -46,9 +46,16 @@ class plot_file:
         DataDF = curr_fileDFS[1][1]
 
         print(DataDF.head())
-        warrant = metaDF.loc[metaDF.Name == "Warrant Number","Value"].values[0]
-        sample = metaDF.loc[metaDF.Name == "Sample Number","Value"].values[0]
-##        print("Warrant: {}\nSample:{}".format(warrant,sample))
+        try:
+            warrant = metaDF.loc[metaDF.Name == "Warrant Number","Value"].values[0]
+        except IndexError:
+            print("No warrant data.")
+            warrant = "No data"
+        try:
+            sample = metaDF.loc[metaDF.Name == "Sample Number","Value"].values[0]
+        except IndexError:
+            print("No sample data")
+            sample = "No data"
 
         # Process X_avg data
         X_data = DataDF["X_AVG"].tolist()
@@ -87,24 +94,30 @@ class plot_file:
         Drive = DataDF.loc[DataDF["Reported Gear"]=="Drive","Extension [mm]"]
 
         # Get gear transitions
-        PtoR = Reverse.tolist()[0]
-        RtoN = Neutral.tolist()[0]
-        NtoD = Drive.tolist()[0]
+        try:
+            PtoR = Reverse.tolist()[0]
+            RtoN = Neutral.tolist()[0]
+            NtoD = Drive.tolist()[0]
 
-        DtoN = Drive.tolist()[-1]
-        NtoR = Neutral.tolist()[-1]
-        RtoP = Reverse.tolist()[-1]
+            DtoN = Drive.tolist()[-1]
+            NtoR = Neutral.tolist()[-1]
+            RtoP = Reverse.tolist()[-1]
+        except IndexError:
+            print("No gear data")
 
         # Process load data
         Positive_loads = DataDF.loc[DataDF["Load [N]"]>=0,"Extension [mm]"]
 
-        First_zero = Positive_loads.tolist()[0]
-        print("First zero crossing: {}mm".format(First_zero))
+        try:
+            First_zero = Positive_loads.tolist()[0]
+            print("First zero crossing: {}mm".format(First_zero))
+        except IndexError:
+            print("No load data")
         
         try:
             self.output.append([f,warrant,sample,X_start,Y_start,
                            X_end,Y_end,X_min,X_max,Y_min,Y_max,
-                           PtoR,RtoN,NtoD,DtoN,NtoR,RtoP])
+                           PtoR,RtoN,NtoD,DtoN,NtoR,RtoP,First_zero])
         except:
             print("Error!")
             

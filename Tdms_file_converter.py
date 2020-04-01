@@ -43,7 +43,7 @@ def tdms_files_in_dir(file_path):
     return(tdms_files)
 
 if __name__ == '__main__':
-    working_dir = r'E:\Work\GHSP\HDrive\WIP\12504 - LD Pursuit\Issue #314 - Pursuit DV\Warrant 202000553 - Instron effort testing'
+    working_dir = r'E:\Work\GHSP\HDrive\WIP\12504 - LD Pursuit\Issue #314 - Pursuit DV\Issue #314.5 - DVPV-124 Sensor drift\202000562 vs 202000564 - shimmed part\562'
     file_list = tdms_files_in_dir(working_dir)
     for f in file_list:
         DF_list = tdms_to_dfs(os.path.join(working_dir,f))
