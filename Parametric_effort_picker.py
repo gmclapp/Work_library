@@ -30,7 +30,37 @@ class plot_file:
 
     def build_path(self):
         self.full_path = os.path.join(self.path.get(),self.file.get())
-        print(self.full_path)
+        return(self.full_path)
+
+    def plot_me(self):
+        self.plot_fig, self.ax = plt.subplots(1,1,figsize=(10,6),dpi=100)
+        x_lower = -5
+        x_upper = 35
+        self.ax.set_xlim(x_lower,x_upper)
+        self.ax.set_ylim(-75,75)
+        self.ax.set_xlabel('Angle (Degrees)')
+        self.ax.set_ylabel('Force (Newtons)')
+        
+        tdms_file = TFC.tdms_to_dfs(self.build_path())
+        meta_data = tdms_file[0]
+        results = tdms_file[1]
+        data = tdms_file[2][1]
+        laser_data = tdms_file[3]
+
+        Elapsed_Time = data['Time Elapsed'].tolist()
+        Angle = data['Fore-Aft Angle [Deg.]'].tolist()
+        Load = data['Fore-Aft Load [N]'].tolist()
+        CCLoad = data['Cross-Car Load [N]'].tolist()
+        
+        pd.set_option('display.max_columns',None)
+        print("Data:{}".format(data.head()))
+
+        self.ax.plot(Angle,Load)
+        self.ax.hlines(0,x_lower,x_upper,'black','solid')
+        
+        plt.show()
+
+        
 
 class GUI:
     def __init__(self,master):
@@ -64,7 +94,7 @@ class GUI:
         # Add buttons
         self.next_button = tk.Button(self.file_frame,text=">",command=self.Plot.next_file_cmd)     
         self.prev_button = tk.Button(self.file_frame,text="<",command=self.Plot.prev_file_cmd)
-        self.apply_button = tk.Button(self.file_frame,text="Apply",command=self.Plot.build_path)
+        self.apply_button = tk.Button(self.file_frame,text="Apply",command=self.Plot.plot_me)
         
         # Add text entry fields and askdirectory buttons
         
