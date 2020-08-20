@@ -32,6 +32,17 @@ class plot_file:
         self.full_path = os.path.join(self.path.get(),self.file.get())
         return(self.full_path)
 
+    def parse_data(self):
+        self.meta_data = self.tdms_file[0]
+        self.results = self.tdms_file[1]
+        self.data = self.tdms_file[2][1]
+        self.laser_data = self.tdms_file[3]
+
+    def apply_cmd(self):
+        self.tdms_file = TFC.tdms_to_dfs(self.build_path())
+        self.parse_data()
+        self.plot_me()
+
     def plot_me(self):
         self.plot_fig, self.ax = plt.subplots(1,1,figsize=(10,6),dpi=100)
         x_lower = -5
@@ -41,19 +52,13 @@ class plot_file:
         self.ax.set_xlabel('Angle (Degrees)')
         self.ax.set_ylabel('Force (Newtons)')
         
-        tdms_file = TFC.tdms_to_dfs(self.build_path())
-        meta_data = tdms_file[0]
-        results = tdms_file[1]
-        data = tdms_file[2][1]
-        laser_data = tdms_file[3]
-
-        Elapsed_Time = data['Time Elapsed'].tolist()
-        Angle = data['Fore-Aft Angle [Deg.]'].tolist()
-        Load = data['Fore-Aft Load [N]'].tolist()
-        CCLoad = data['Cross-Car Load [N]'].tolist()
+        Elapsed_Time = self.data['Time Elapsed'].tolist()
+        Angle = self.data['Fore-Aft Angle [Deg.]'].tolist()
+        Load = self.data['Fore-Aft Load [N]'].tolist()
+        CCLoad = self.data['Cross-Car Load [N]'].tolist()
         
         pd.set_option('display.max_columns',None)
-        print("Data:{}".format(data.head()))
+        print("Data:{}".format(self.data.head()))
 
         self.ax.plot(Angle,Load)
         self.ax.hlines(0,x_lower,x_upper,'black','solid')
@@ -94,7 +99,7 @@ class GUI:
         # Add buttons
         self.next_button = tk.Button(self.file_frame,text=">",command=self.Plot.next_file_cmd)     
         self.prev_button = tk.Button(self.file_frame,text="<",command=self.Plot.prev_file_cmd)
-        self.apply_button = tk.Button(self.file_frame,text="Apply",command=self.Plot.plot_me)
+        self.apply_button = tk.Button(self.file_frame,text="Apply",command=self.Plot.apply_cmd)
         
         # Add text entry fields and askdirectory buttons
         
