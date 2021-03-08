@@ -201,7 +201,7 @@ def melexsis_plotter(ax, data,faded=False):
 
     X = CAN_data['X_AVG'].tolist()
     Y = CAN_data['Y_AVG'].tolist()
-    GEAR = CAN_data['Reported Gear']
+    GEAR = CAN_data['Reported Gear (Hex)']
 
     X = list(filter(lambda a: a != 0,X))
     X = list(filter(lambda a: a != 131.07,X))
