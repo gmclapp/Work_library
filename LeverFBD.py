@@ -1,6 +1,18 @@
 import math
 import json
+import numpy as np
 import matplotlib.pyplot as plt
+
+def RotateXY(vector,deg):
+    '''vector = [x,y], degrees = rotation
+    Returns a unit vector rotated counter clockwise about z by degrees.'''
+    x = vector[0]
+    y = vector[0]
+    r = deg * math.pi/180
+    mag = (x**2 + y **2)**0.5
+    xprime = (x*math.cos(r)-y*math.sin(r))/mag
+    yprime = (x*math.sin(r)+y*math.cos(r))/mag
+    return([xprime,yprime])
 
 class leverModel:
     ''' The lever coordinate system is defined such that the positive z axis
@@ -32,12 +44,14 @@ class leverModel:
         # Normal operation
 
     def solve_poop_static(self):
-        x = self.cable_pin_r[0]
-        y = self.cable_pin_r[1]
-        mag = (x**2 + y ** 2)**0.5
-        theta = 1.5*math.pi
-        self.cable_pin_F = [(x*math.cos(theta)-y*math.sin(theta))*self.POOP_maxF/mag,
-                            (x*math.sin(theta)+y*math.cos(theta))*self.POOP_maxF/mag]
+##        x = self.cable_pin_r[0]
+##        y = self.cable_pin_r[1]
+##        mag = (x**2 + y ** 2)**0.5
+##        theta = 1.5*math.pi
+##        self.cable_pin_F = [(x*math.cos(theta)-y*math.sin(theta))*self.POOP_maxF/mag,
+##                            (x*math.sin(theta)+y*math.cos(theta))*self.POOP_maxF/mag]
+        self.cable_pin_F = RotateXY(self.cable_pin_r,270)
+        #self.cable_pin_F *= self.POOP_maxF
         print(self.cable_pin_F)
 
         LAPx = self.knob_r[0]
