@@ -3,6 +3,11 @@ import json
 import matplotlib.pyplot as plt
 
 class leverModel:
+    ''' The lever coordinate system is defined such that the positive z axis
+    is the axis of the pivot pin. The positive direction is such that a rotation
+    from Park to Drive is a positive angular displacement. The x axis is parallel
+    to the lever where the positive direction points toward the knob from the pivot
+    the y axis completes the right-handed coordinate system.'''
     def __init__(self):
         # Define force application locations
         self.cable_pin_r = [56.25,-41.66] # mm
