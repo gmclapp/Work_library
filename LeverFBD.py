@@ -32,6 +32,7 @@ class leverModel:
         self.pawl_pin_F = 0
         self.knob_F = 0
         self.detent_F = 0
+        self.reaction_F = 0
 
         # Load paradigms
         # Max pull out of park
@@ -51,7 +52,9 @@ class leverModel:
 
         self.knob_F = -1 * np.cross(self.poop_T,self.knob_r)/np.dot(self.knob_r,self.knob_r)
         print(self.knob_F)
-
+        
+        self.reaction_F = -1 * np.add(self.cable_pin_F, self.knob_F)
+        print(self.reaction_F)
 
 if __name__ == "__main__":
     Lever = leverModel()
