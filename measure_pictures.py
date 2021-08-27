@@ -40,11 +40,14 @@ def draw():
                                             GO.attr["GREEN"])
     
     if GO.var["pic"]:
-        GO.attr["Main Surface"].blit(GO.var["pic"],(0,0))
+        GO.attr["Main Surface"].blit(GO.var["pic"],(GO.var["image_x"],
+                                                    GO.var["image_y"]))
     GO.attr["Main Surface"].blit(debug_txt_surf,(0,0))
 
     for point in GO.var["points"]:
-        GO.attr["Main Surface"].blit(GO.attr["point_png"],(point[0]-16,point[1]-16))
+        px = point[0]-16+GO.var["image_x"]
+        py = point[1]-16+GO.var["image_y"]
+        GO.attr["Main Surface"].blit(GO.attr["point_png"],(px,py))
     pygame.display.flip()
 
 def main_loop():
@@ -61,10 +64,19 @@ def main_loop():
                 if event.key == pygame.K_SPACE:
                     print("Space pressed!")
                     GO.set_pic("","S-45 alignment.jpg")
+                elif event.key == pygame.K_RIGHT:
+                    GO.var["image_x"] -= 5
+                elif event.key == pygame.K_LEFT:
+                    GO.var["image_x"] += 5
+                elif event.key == pygame.K_UP:
+                    GO.var["image_y"] -= 5
+                elif event.key == pygame.K_DOWN:
+                    GO.var["image_y"] += 5
             elif event.type == pygame.MOUSEBUTTONUP:
                 if event.button == 1:
-                    print("LMB")
-                    GO.var["points"].append(event.pos)
+                    x, y = event.pos
+                    
+                    GO.var["points"].append((x-GO.var["image_x"],y-GO.var["image_y"]))
                     print(GO.var["points"])
                         
         update()
