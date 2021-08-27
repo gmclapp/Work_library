@@ -16,7 +16,10 @@ class game_obj():
             "BROWN": (100,60,30),
             "Main Surface": pygame.display.set_mode((native.current_w,
                                                      native.current_h-64)),
-            "point_png":pygame.image.load("X.png")
+            "point_png":pygame.image.load("X.png"),
+            "image_pane":pygame.Surface((600,600)),
+            "image_pane_x":20,
+            "image_pane_y":20
             }
         self.var = {
             "mx": 0,
@@ -40,14 +43,16 @@ def draw():
                                             GO.attr["GREEN"])
     
     if GO.var["pic"]:
-        GO.attr["Main Surface"].blit(GO.var["pic"],(GO.var["image_x"],
+        GO.attr["image_pane"].blit(GO.var["pic"],(GO.var["image_x"],
                                                     GO.var["image_y"]))
+        for point in GO.var["points"]:
+            px = point[0]-16+GO.var["image_x"]
+            py = point[1]-16+GO.var["image_y"]
+            GO.attr["image_pane"].blit(GO.attr["point_png"],(px,py))
+        GO.attr["Main Surface"].blit(GO.attr["image_pane"],(GO.attr["image_pane_x"],GO.attr["image_pane_x"]))
     GO.attr["Main Surface"].blit(debug_txt_surf,(0,0))
 
-    for point in GO.var["points"]:
-        px = point[0]-16+GO.var["image_x"]
-        py = point[1]-16+GO.var["image_y"]
-        GO.attr["Main Surface"].blit(GO.attr["point_png"],(px,py))
+    
     pygame.display.flip()
 
 def main_loop():
@@ -76,7 +81,7 @@ def main_loop():
                 if event.button == 1:
                     x, y = event.pos
                     
-                    GO.var["points"].append((x-GO.var["image_x"],y-GO.var["image_y"]))
+                    GO.var["points"].append((x-GO.var["image_x"]-GO.attr["image_pane_x"],y-GO.var["image_y"]-GO.attr["image_pane_y"]))
                     print(GO.var["points"])
                         
         update()
