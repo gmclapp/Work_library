@@ -18,7 +18,8 @@ class game_obj():
         self.var = {
             "mx": 0,
             "my": 0,
-            "pic": None
+            "pic": None,
+            "points":[]
             }
     def set_pic(self,path,filename):
         self.var["pic"] = pygame.image.load(os.path.join(path,filename))
@@ -52,6 +53,11 @@ def main_loop():
                 if event.key == pygame.K_SPACE:
                     print("Space pressed!")
                     GO.set_pic("","S-45 alignment.jpg")
+            elif event.type == pygame.MOUSEBUTTONUP:
+                if event.button == 1:
+                    print("LMB")
+                    GO.var["points"].append(event.pos)
+                    print(GO.var["points"])
                         
         update()
         draw()
@@ -59,7 +65,7 @@ def main_loop():
     quit_nicely()
 
 def initialize():
-    os.environ['SDL_VIDEO_WINDO_POS'] = "5,25"
+    os.environ['SDL_VIDEO_WINDO_POS'] = "0,0"
     pygame.init()
     GO = game_obj()
     return(GO)
