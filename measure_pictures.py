@@ -2,25 +2,29 @@ import pygame
 import os
 
 class game_obj():
-    def __init__(self,wid=2000,hei=1500):
+    def __init__(self):
+        native = pygame.display.Info()
         self.attr = {
             "font":pygame.font.Font(None,32),
-            "WIDTH":wid,
-            "HEIGHT":hei,
+            "WIDTH":native.current_w,
+            "HEIGHT":native.current_w,
             "BLACK":(0,0,0),
             "GREEN": (0,255,0),
             "WHITE": (255,255,255),
             "RED": (255,0,0),
             "BLUE": (0,0,255),
             "BROWN": (100,60,30),
-            "Main Surface": pygame.display.set_mode((wid,hei)),
+            "Main Surface": pygame.display.set_mode((native.current_w,
+                                                     native.current_h-64)),
             "point_png":pygame.image.load("X.png")
             }
         self.var = {
             "mx": 0,
             "my": 0,
             "pic": None,
-            "points":[]
+            "points":[],
+            "image_x":0,
+            "image_y":0
             }
     def set_pic(self,path,filename):
         self.var["pic"] = pygame.image.load(os.path.join(path,filename))
