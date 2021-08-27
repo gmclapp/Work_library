@@ -13,7 +13,8 @@ class game_obj():
             "RED": (255,0,0),
             "BLUE": (0,0,255),
             "BROWN": (100,60,30),
-            "Main Surface": pygame.display.set_mode((wid,hei))
+            "Main Surface": pygame.display.set_mode((wid,hei)),
+            "point_png":pygame.image.load("X.png")
             }
         self.var = {
             "mx": 0,
@@ -37,6 +38,9 @@ def draw():
     if GO.var["pic"]:
         GO.attr["Main Surface"].blit(GO.var["pic"],(0,0))
     GO.attr["Main Surface"].blit(debug_txt_surf,(0,0))
+
+    for point in GO.var["points"]:
+        GO.attr["Main Surface"].blit(GO.attr["point_png"],(point[0]-16,point[1]-16))
     pygame.display.flip()
 
 def main_loop():
