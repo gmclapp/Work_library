@@ -54,6 +54,8 @@ def draw():
             py = point[1]-16
             tempsurface.blit(GO.attr["point_png"],(px,py))
 
+        tempsurface = pygame.transform.scale(tempsurface,(int(tempx*GO.var["scale"]),
+                                                          int(tempy*GO.var["scale"])))
         GO.attr["image_pane"].blit(tempsurface,(GO.var["image_x"],
                                                     GO.var["image_y"]))
         
