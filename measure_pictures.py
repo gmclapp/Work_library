@@ -43,6 +43,8 @@ def draw():
                                             GO.attr["GREEN"])
     
     if GO.var["pic"]:
+        tempx, tempy = GO.var["pic"].get_size()
+        tempsurface = pygame.Surface((tempx, tempy))
         GO.attr["image_pane"].blit(GO.var["pic"],(GO.var["image_x"],
                                                     GO.var["image_y"]))
         for point in GO.var["points"]:
