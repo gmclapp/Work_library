@@ -89,6 +89,8 @@ def main_loop():
                     
                     GO.var["points"].append((x-GO.var["image_x"]-GO.attr["image_pane_x"],y-GO.var["image_y"]-GO.attr["image_pane_y"]))
                     print(GO.var["points"])
+            elif event.type == pygame.MOUSEWHEEL:
+                print(event.y)
                         
         update()
         draw()
