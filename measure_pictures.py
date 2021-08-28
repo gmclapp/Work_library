@@ -27,7 +27,8 @@ class game_obj():
             "pic": None,
             "points":[],
             "image_x":0,
-            "image_y":0
+            "image_y":0,
+            "scale":1
             }
     def set_pic(self,path,filename):
         self.var["pic"] = pygame.image.load(os.path.join(path,filename))
@@ -37,8 +38,9 @@ def update():
 
 def draw():
     GO.attr["Main Surface"].fill((200,200,200))
-    debug_txt_surf = GO.attr["font"].render("X: {}, Y: {}".format(GO.var["mx"],
-                                                                  GO.var["my"]),
+    debug_txt_surf = GO.attr["font"].render("X: {}, Y: {}, Scale: {}".format(GO.var["mx"],
+                                                                             GO.var["my"],
+                                                                             GO.var["scale"]),
                                             True,
                                             GO.attr["GREEN"])
     
@@ -90,7 +92,11 @@ def main_loop():
                     GO.var["points"].append((x-GO.var["image_x"]-GO.attr["image_pane_x"],y-GO.var["image_y"]-GO.attr["image_pane_y"]))
                     print(GO.var["points"])
             elif event.type == pygame.MOUSEWHEEL:
-                print(event.y)
+                GO.var["scale"] += round(event.y *0.05,2)
+                if GO.var["scale"] > 1:
+                    GO.var["scale"] = 1
+                elif GO.var["scale"] < 0:
+                    GO.var["scale"] = 0
                         
         update()
         draw()
