@@ -45,12 +45,16 @@ def draw():
     if GO.var["pic"]:
         tempx, tempy = GO.var["pic"].get_size()
         tempsurface = pygame.Surface((tempx, tempy))
-        GO.attr["image_pane"].blit(GO.var["pic"],(GO.var["image_x"],
-                                                    GO.var["image_y"]))
+        tempsurface.blit(GO.var["pic"],(0,0))
+        
         for point in GO.var["points"]:
-            px = point[0]-16+GO.var["image_x"]
-            py = point[1]-16+GO.var["image_y"]
-            GO.attr["image_pane"].blit(GO.attr["point_png"],(px,py))
+            px = point[0]-16
+            py = point[1]-16
+            tempsurface.blit(GO.attr["point_png"],(px,py))
+
+        GO.attr["image_pane"].blit(tempsurface,(GO.var["image_x"],
+                                                    GO.var["image_y"]))
+        
         GO.attr["Main Surface"].blit(GO.attr["image_pane"],(GO.attr["image_pane_x"],GO.attr["image_pane_x"]))
     GO.attr["Main Surface"].blit(debug_txt_surf,(0,0))
 
