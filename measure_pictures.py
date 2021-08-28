@@ -91,7 +91,16 @@ def main_loop():
                 if event.button == 1:
                     x, y = event.pos
                     
-                    GO.var["points"].append((x-GO.var["image_x"]-GO.attr["image_pane_x"],y-GO.var["image_y"]-GO.attr["image_pane_y"]))
+                    x -= GO.var["image_x"]
+                    x -= GO.attr["image_pane_x"]
+                    x = x / GO.var["scale"]
+                    
+                    y -= GO.var["image_y"]
+                    y -= GO.attr["image_pane_y"]
+                    y = y / GO.var["scale"]
+                    
+                    GO.var["points"].append((x,y))
+                    
                     print(GO.var["points"])
             elif event.type == pygame.MOUSEWHEEL:
                 GO.var["scale"] += round(event.y *0.05,2)
