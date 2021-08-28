@@ -104,8 +104,8 @@ def main_loop():
                     print(GO.var["points"])
             elif event.type == pygame.MOUSEWHEEL:
                 GO.var["scale"] += round(event.y *0.05,2)
-                if GO.var["scale"] > 1:
-                    GO.var["scale"] = 1
+                if GO.var["scale"] > 5:
+                    GO.var["scale"] = 5
                 elif GO.var["scale"] < 0:
                     GO.var["scale"] = 0
                         
