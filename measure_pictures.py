@@ -43,7 +43,7 @@ def draw():
                                                                              GO.var["scale"]),
                                             True,
                                             GO.attr["GREEN"])
-    
+    GO.attr["image_pane"].fill(GO.attr["BLACK"])
     if GO.var["pic"]:
         tempx, tempy = GO.var["pic"].get_size()
         tempsurface = pygame.Surface((tempx, tempy))
